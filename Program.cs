@@ -1,8 +1,15 @@
+using JobSeed.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<AppDbContext>(options =>
+        {
+            string connectString = builder.Configuration.GetConnectionString("MyContext");
+            options.UseSqlServer(connectString);
+        });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
