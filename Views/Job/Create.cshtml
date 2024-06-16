@@ -1,0 +1,210 @@
+@model Job
+@inject AppDbContext _context;
+<div style="margin-top: 100px; margin-bottom: 100px;">
+    <form id="create-job" method="post" asp-action="Create" style="width: 60%; margin: 0 auto;" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="JobName" class="control-label"></label>
+            <input type="text" asp-for="JobName" class="form-control" id="jobName">
+            <span class="text-danger error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FormFile" class="control-label">Select company image</label>
+            <input type="file" asp-for="FormFile" class="form-control" id="formFile">
+            <span class="text-danger error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="JobDescription" class="control-label">Job descriptions</label>
+            <textarea asp-for="JobDescription" id="jobDescription"></textarea>
+            <span class="text-danger error" id="jobDescriptionError"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CompanyName" class="control-label">Company Name</label>
+            <input type="text" asp-for="CompanyName" class="form-control" id="companyName">
+            <span class="text-danger error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Location" class="control-label">Location</label>
+            <input type="text" asp-for="Location" class="form-control" id="location">
+            <span class="text-danger error"></span>
+        </div>
+
+        <div class="form-group salary-group">
+            <label asp-for="FromSalary" class="control-label">Salary Min:</label>
+            <div class="input-group">
+                <input type="number" asp-for="FromSalary" class="form-control" id="fromSalary">
+                <div class="input-group-append">
+                    <span class="input-group-text">$/month</span>
+                </div>
+            </div>
+            <span class="text-danger error"></span>
+        </div>
+
+        <div class="form-group salary-group">
+            <label asp-for="ToSalary" class="control-label">Salary Max:</label>
+            <div class="input-group">
+                <input type="number" asp-for="ToSalary" class="form-control" id="toSalary">
+                <div class="input-group-append">
+                    <span class="input-group-text">$/month</span>
+                </div>
+            </div>
+            <span class="text-danger error"></span>
+        </div>
+
+        <div class="input-group-icon mt-10">
+            <div class="icon"><i class="fa-solid fa-crosshairs"></i></div>
+            <div class="form-select" id="default-select">
+                <select id="jobtypeid" asp-for="JobTypeId">
+                    <option value="-1">Job Type</option>
+                    @foreach (var item in _context.jobTypes)
+                    {
+                        <option value="@item.Id">@item.JobTitle</option>
+                    }
+                </select>
+            </div>
+            <span class="text-danger error"></span>
+        </div>
+
+        <br>
+        <hr>
+        <h2>Options</h2>
+        <div class="input-group-icon mt-10">
+            <div class="icon"><i class="fa-solid fa-venus-double"></i></div>
+            <div class="form-select" id="default-select">
+                <select id="gender" asp-for="Gender">
+                    <option value="-1">Gender</option>
+                    <option value="false">Female</option>
+                    <option value="true">Male</option>
+                </select>
+            </div>
+            <span class="text-danger error"></span>
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+            <label asp-for="Qualifications" class="control-label">Qualifications (Options)</label>
+            <textarea asp-for="Qualifications" id="qualifications"></textarea>
+        </div>
+        <div class="form-group">
+            <label asp-for="Benefits" class="control-label">Benefits (Options)</label>
+            <textarea asp-for="Benefits" id="benefits"></textarea>
+            <span asp-validation-for="Benefits" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Experiences" class="control-label">Experiences (Options)</label>
+            <textarea asp-for="Experiences" id="experiences"></textarea>
+        </div>
+
+        <hr>
+        <input type="submit" class="btn btn-success" value="Upload Job">
+    </form>
+</div>
+
+<style>
+    .input-group-append .input-group-text {
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-left: none;
+    }
+
+    .input-group .form-control {
+        border-right: none;
+    }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('create-job');
+    
+    form.addEventListener('submit', function (event) {
+        let isValid = true;
+
+        // Validate Job Name
+        const jobName = document.getElementById('jobName');
+        const jobNameError = jobName.nextElementSibling;
+        if (!jobName.value.trim()) {
+            jobNameError.textContent = "Job name is required.";
+            isValid = false;
+        } else {
+            jobNameError.textContent = "";
+        }
+
+        // Validate Form File
+        const formFile = document.getElementById('formFile');
+        const formFileError = formFile.nextElementSibling;
+        if (!formFile.files.length) {
+            formFileError.textContent = "Company image is required.";
+            isValid = false;
+        } else {
+            formFileError.textContent = "";
+        }
+
+        // Validate Job Description
+        const jobDescription = document.getElementById('jobDescription');
+        const jobDescriptionError = document.getElementById('jobDescriptionError');
+        if (!jobDescription.value.trim()) {
+            jobDescriptionError.textContent = "Job description is required.";
+            isValid = false;
+        } else {
+            jobDescriptionError.textContent = "";
+        }
+
+        // Validate Company Name
+        const companyName = document.getElementById('companyName');
+        const companyNameError = companyName.nextElementSibling;
+        if (!companyName.value.trim()) {
+            companyNameError.textContent = "Company name is required.";
+            isValid = false;
+        } else {
+            companyNameError.textContent = "";
+        }
+
+        // Validate Location
+        const location = document.getElementById('location');
+        const locationError = location.nextElementSibling;
+        if (!location.value.trim()) {
+            locationError.textContent = "Location is required.";
+            isValid = false;
+        } else {
+            locationError.textContent = "";
+        }
+
+        // Validate Salary Min
+        const fromSalary = document.getElementById('fromSalary');
+        const fromSalaryError = fromSalary.parentElement.nextElementSibling;
+        if (!fromSalary.value.trim() || fromSalary.value < 0) {
+            fromSalaryError.textContent = "Salary Min must be a positive value.";
+            isValid = false;
+        } else {
+            fromSalaryError.textContent = "";
+        }
+
+        // Validate Salary Max
+        const toSalary = document.getElementById('toSalary');
+        const toSalaryError = toSalary.parentElement.nextElementSibling;
+        if (!toSalary.value.trim() || toSalary.value < 0) {
+            toSalaryError.textContent = "Salary Max must be a positive value.";
+            isValid = false;
+        } else {
+            toSalaryError.textContent = "";
+        }
+
+        // Validate Job Type
+        const jobTypeId = document.getElementById('jobtypeid');
+        const jobTypeIdError = jobTypeId.parentElement.nextElementSibling;
+        if (jobTypeId.value == "-1") {
+            jobTypeIdError.textContent = "Job type is required.";
+            isValid = false;
+        } else {
+            jobTypeIdError.textContent = "";
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+});
+</script>

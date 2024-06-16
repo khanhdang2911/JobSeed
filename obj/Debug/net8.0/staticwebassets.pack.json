@@ -481,54 +481,6 @@
       "PackagePath": "staticwebassets\\img\\banner\\property.png"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\author.png",
-      "PackagePath": "staticwebassets\\img\\blog\\author.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\blog_1.png",
-      "PackagePath": "staticwebassets\\img\\blog\\blog_1.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\blog_2.png",
-      "PackagePath": "staticwebassets\\img\\blog\\blog_2.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\blog_3.png",
-      "PackagePath": "staticwebassets\\img\\blog\\blog_3.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\blog_4.png",
-      "PackagePath": "staticwebassets\\img\\blog\\blog_4.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\learn_about_bg.png",
-      "PackagePath": "staticwebassets\\img\\blog\\learn_about_bg.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\single_blog_1.png",
-      "PackagePath": "staticwebassets\\img\\blog\\single_blog_1.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\single_blog_2.png",
-      "PackagePath": "staticwebassets\\img\\blog\\single_blog_2.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\single_blog_3.png",
-      "PackagePath": "staticwebassets\\img\\blog\\single_blog_3.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\single_blog_4.png",
-      "PackagePath": "staticwebassets\\img\\blog\\single_blog_4.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\single_blog_5.png",
-      "PackagePath": "staticwebassets\\img\\blog\\single_blog_5.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\blog\\slide_thumb_1.png",
-      "PackagePath": "staticwebassets\\img\\blog\\slide_thumb_1.png"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\img\\brand\\1.png",
       "PackagePath": "staticwebassets\\img\\brand\\1.png"
     },
@@ -547,46 +499,6 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\img\\brand\\5.png",
       "PackagePath": "staticwebassets\\img\\brand\\5.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\1.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\1.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\10.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\10.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\2.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\2.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\3.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\3.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\4.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\4.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\5.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\5.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\6.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\6.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\7.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\7.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\8.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\8.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\candiateds\\9.png",
-      "PackagePath": "staticwebassets\\img\\candiateds\\9.png"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\img\\catagory\\1.png",
@@ -619,118 +531,6 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\img\\catagory\\8.png",
       "PackagePath": "staticwebassets\\img\\catagory\\8.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\comment\\comment_1.png",
-      "PackagePath": "staticwebassets\\img\\comment\\comment_1.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\comment\\comment_2.png",
-      "PackagePath": "staticwebassets\\img\\comment\\comment_2.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\comment\\comment_3.png",
-      "PackagePath": "staticwebassets\\img\\comment\\comment_3.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\a.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\a.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\a2.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\a2.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\d.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\d.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\disabled-check.png",
-      "PackagePath": "staticwebassets\\img\\elements\\disabled-check.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\disabled-radio.png",
-      "PackagePath": "staticwebassets\\img\\elements\\disabled-radio.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f1.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f1.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f2.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f2.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f3.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f3.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f4.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f4.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f5.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f5.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f6.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f6.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f7.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f7.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\f8.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\f8.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g1.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g1.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g2.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g2.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g3.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g3.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g4.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g4.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g5.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g5.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g6.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g6.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g7.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g7.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\g8.jpg",
-      "PackagePath": "staticwebassets\\img\\elements\\g8.jpg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\primary-check.png",
-      "PackagePath": "staticwebassets\\img\\elements\\primary-check.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\primary-radio.png",
-      "PackagePath": "staticwebassets\\img\\elements\\primary-radio.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\success-check.png",
-      "PackagePath": "staticwebassets\\img\\elements\\success-check.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\elements\\success-radio.png",
-      "PackagePath": "staticwebassets\\img\\elements\\success-radio.png"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\img\\explorer\\1.png",
@@ -789,54 +589,6 @@
       "PackagePath": "staticwebassets\\img\\logo1.png"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\next.png",
-      "PackagePath": "staticwebassets\\img\\post\\next.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_1.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_1.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_10.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_10.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_2.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_2.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_3.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_3.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_4.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_4.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_5.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_5.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_6.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_6.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_7.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_7.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_8.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_8.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\post_9.png",
-      "PackagePath": "staticwebassets\\img\\post\\post_9.png"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\post\\preview.png",
-      "PackagePath": "staticwebassets\\img\\post\\preview.png"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\img\\property\\1.png",
       "PackagePath": "staticwebassets\\img\\property\\1.png"
     },
@@ -887,10 +639,6 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\6.svg",
       "PackagePath": "staticwebassets\\img\\svg_icon\\6.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\testmonial\\author.png",
-      "PackagePath": "staticwebassets\\img\\testmonial\\author.png"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\js\\ajax-form.js",
@@ -1237,14 +985,6 @@
       "PackagePath": "staticwebassets\\scss\\_accordion_area.scss"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_blog.scss",
-      "PackagePath": "staticwebassets\\scss\\_blog.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_blog_part.scss",
-      "PackagePath": "staticwebassets\\scss\\_blog_part.scss"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_bradcam.scss",
       "PackagePath": "staticwebassets\\scss\\_bradcam.scss"
     },
@@ -1259,10 +999,6 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_compani.scss",
       "PackagePath": "staticwebassets\\scss\\_compani.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_contact.scss",
-      "PackagePath": "staticwebassets\\scss\\_contact.scss"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_elements.scss",
@@ -1325,10 +1061,6 @@
       "PackagePath": "staticwebassets\\scss\\_slider.scss"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_team.scss",
-      "PackagePath": "staticwebassets\\scss\\_team.scss"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_testmonial.scss",
       "PackagePath": "staticwebassets\\scss\\_testmonial.scss"
     },
@@ -1343,6 +1075,10 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\theme-default.scss",
       "PackagePath": "staticwebassets\\scss\\theme-default.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo.png",
+      "PackagePath": "staticwebassets\\uploads\\logo.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.JobSeed.Microsoft.AspNetCore.StaticWebAssets.props",

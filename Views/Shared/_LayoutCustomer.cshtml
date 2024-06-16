@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="~/css/slicknav.css">
 
     <link rel="stylesheet" href="~/css/style.css">
+
+    @* Add tiny *@
+    <script src="https://cdn.tiny.cloud/1/pvevi5e0hjaun4w4calzq12nn00r46e03b2jbdztxcvfxyxl/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    @* Add fontawesome *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -30,7 +35,7 @@
 
     <!-- header-start -->
     <header>
-        <div class="header-area ">
+        <div class="header-area" style="background-color: #29b162;">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid ">
                     <div class="header_bottom_border">
@@ -221,6 +226,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <script src="~/js/main.js"></script>
+    <script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+        ],
+        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+    });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

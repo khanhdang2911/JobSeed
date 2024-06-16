@@ -18,8 +18,15 @@ namespace JobSeed.Models
         } 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UsersRole>(options=>{
+                options.HasKey(u=>new{u.UsersId, u.RoleId});
+            });
         }
-        
+        public DbSet<Job> jobs { get; set; }
+        public DbSet<JobType> jobTypes{set;get;}
+        public DbSet<Role> roles{set;get;}
+        public DbSet<Users> users {set;get;}
+        public DbSet<UsersRole> usersRoles {set;get;}
     }
 }

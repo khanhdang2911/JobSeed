@@ -252,3 +252,6 @@ D:\JobSeed\obj\Debug\net8.0\refint\JobSeed.dll
 D:\JobSeed\obj\Debug\net8.0\JobSeed.pdb
 D:\JobSeed\obj\Debug\net8.0\JobSeed.genruntimeconfig.cache
 D:\JobSeed\obj\Debug\net8.0\ref\JobSeed.dll
+D:\JobSeed\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\JobSeed\bin\Debug\net8.0\MailKit.dll
+D:\JobSeed\bin\Debug\net8.0\MimeKit.dll
