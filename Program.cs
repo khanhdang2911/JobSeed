@@ -1,4 +1,5 @@
 using JobSeed.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,20 @@ builder.Services.AddDbContext<AppDbContext>(options =>
             string connectString = builder.Configuration.GetConnectionString("MyContext");
             options.UseSqlServer(connectString);
         });
+
+//Cookie authentication
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath="/User/Login";
+        // options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        // options.SlidingExpiration = true; 
+        options.AccessDeniedPath = "/Login/Forbidden/";
+    });
+// 
+builder.Services.AddSingleton<HashPasswordByBC>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,6 +40,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

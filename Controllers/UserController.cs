@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using MailKit.Net.Smtp;
 using MimeKit;
-namespace PBL3_Course.Controllers;
+namespace JobSeed.Controllers;
 
 public class UserController : Controller
 {

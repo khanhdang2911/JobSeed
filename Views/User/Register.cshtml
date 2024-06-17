@@ -1,0 +1,64 @@
+@model Users
+<style>
+    .form-register{
+        border: 2px solid grey;
+        padding: 10px;
+        margin-top: 200px;
+    }
+</style>
+<div class="container" style="width: 40%;min-width: 320px;">
+    
+    <form id="register-form" method="post" asp-action="Register" class="form-register">
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input id="password" asp-for="Password" class="form-control" type="password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="ConfirmPassword" class="control-label">Nhập lại mật khẩu</label>
+            <input name="ConfirmPassword" id="ConfirmPassword" type="password" class="form-control">
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" type="text">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone" class="control-label"></label>
+            <input asp-for="Phone" class="form-control" type="text">
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <hr>
+        <input type="submit" value="Register" class="btn btn-info">
+    </form>
+</div>
+@section scripts{
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    }
+
+<script>
+    let registerForm=document.querySelector("#register-form");
+    let passwordInput=document.querySelector("#password");
+    let confirmPasswordInput=document.querySelector("#ConfirmPassword")
+    registerForm.onsubmit=function(e)
+    {
+        if(passwordInput.value!=confirmPasswordInput.value)
+        {
+            e.preventDefault();
+            let errorNode=confirmPasswordInput.parentElement.querySelector("span");
+            errorNode.innerHTML="Your confirm password is not correct!";
+        }
+    }
+    confirmPasswordInput.oninput=function(e)
+    {
+        e.target.innerHTML="";
+    }
+</script>
+

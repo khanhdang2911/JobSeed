@@ -1,0 +1,54 @@
+@using Microsoft.EntityFrameworkCore
+@inject AppDbContext _context
+@model Users
+@{
+    int UserId=int.Parse(User.Claims.FirstOrDefault(c=>c.Type=="Id")?.Value.ToString());
+}
+
+<div style="border: 1px solid rgba(43, 37, 37, 0.527); width: 70%; margin: 50px auto 25px;"></div>
+<div class="profile">
+    <div class="info">
+        <form  method="post" asp-action="EditUser" asp-route-UsersId="@Model.Id" style="margin: 0 auto;">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for ="Email" class="control-label" ></label>
+                <input type="text" asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                    @* <label asp-for ="Password" class="control-label" ></label> *@
+   
+                    <input type="hidden" asp-for="Password" class="form-control" value="@Model.Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            
+            <div class="form-group">
+                <label asp-for ="Name" class="control-label" ></label>
+                <input type="text" asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for ="Phone" class="control-label" ></label>
+                <input type="text" asp-for="Phone" class="form-control">
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <a asp-action="ChangePassword" asp-controller="User" asp-route-id="@Model.Id">Đổi mật khẩu</a>
+            <hr>
+            
+
+            <input type="submit" class="btn btn-success" value="Lưu thông tin">
+        </form>
+    </div>
+
+</div>
+<style>
+    .profile{
+        display: flex;
+        justify-content: center;
+        gap: 140px;
+    }
+    .info{
+        width: 300px;
+    }
+</style>

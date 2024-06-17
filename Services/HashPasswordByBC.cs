@@ -11,6 +11,4 @@ public class HashPasswordByBC
         bool isMatch = BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         return isMatch;
     }
-
-
 }
