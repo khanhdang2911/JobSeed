@@ -28,5 +28,6 @@ namespace JobSeed.Models
         public DbSet<Role> roles{set;get;}
         public DbSet<Users> users {set;get;}
         public DbSet<UsersRole> usersRoles {set;get;}
+        public DbSet<Category> categories{set;get;}
     }
 }

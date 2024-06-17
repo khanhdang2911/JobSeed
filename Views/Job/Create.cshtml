@@ -3,7 +3,7 @@
 <div style="margin-top: 100px; margin-bottom: 100px;">
     <form id="create-job" method="post" asp-action="Create" style="width: 60%; margin: 0 auto;" enctype="multipart/form-data">
         <div class="form-group">
-            <label asp-for="JobName" class="control-label"></label>
+            <label asp-for="JobName" class="control-label">Job Title</label>
             <input type="text" asp-for="JobName" class="form-control" id="jobName">
             <span class="text-danger error"></span>
         </div>
@@ -29,6 +29,20 @@
         <div class="form-group">
             <label asp-for="Location" class="control-label">Location</label>
             <input type="text" asp-for="Location" class="form-control" id="location">
+            <span class="text-danger error"></span>
+        </div>
+
+        <div class="input-group-icon mt-10">
+            <div class="icon"><i class="fa-solid fa-list"></i></div>
+            <div class="form-select" id="default-select">
+                <select id="CategoryId" asp-for="CategoryId">
+                    <option value="-1">Category</option>
+                    @foreach (var item in _context.categories)
+                    {
+                        <option value="@item.Id">@item.CategoryName</option>
+                    }
+                </select>
+            </div>
             <span class="text-danger error"></span>
         </div>
 
@@ -75,7 +89,7 @@
             <div class="icon"><i class="fa-solid fa-venus-double"></i></div>
             <div class="form-select" id="default-select">
                 <select id="gender" asp-for="Gender">
-                    <option value="-1">Gender</option>
+                    <option value="">Gender</option>
                     <option value="false">Female</option>
                     <option value="true">Male</option>
                 </select>
@@ -170,6 +184,16 @@ document.addEventListener('DOMContentLoaded', function () {
             isValid = false;
         } else {
             locationError.textContent = "";
+        }
+
+        // Validate Category
+        const categoryId = document.getElementById('categoryId');
+        const categoryIdError = categoryId.parentElement.nextElementSibling;
+        if (categoryId.value == "-1") {
+            categoryIdError.textContent = "Category is required.";
+            isValid = false;
+        } else {
+            categoryIdError.textContent = "";
         }
 
         // Validate Salary Min

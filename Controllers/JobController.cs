@@ -32,7 +32,7 @@ namespace JobSeed.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,JobTypeId,FormFile,Gender,Experiences,Qualifications,Benefits")] Job job)
+        public async Task<IActionResult> Create([Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,JobTypeId,FormFile,CategoryId,Gender,Experiences,Qualifications,Benefits")] Job job)
         {
             if (!ModelState.IsValid)
             {
@@ -71,7 +71,7 @@ namespace JobSeed.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int? id, [Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,Status,JobTypeId,FormFile,Gender,Experiences,Qualifications,Benefits")] Job job)
+        public async Task<IActionResult> Edit(int? id, [Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,Status,JobTypeId,FormFile,CategoryId,Gender,Experiences,Qualifications,Benefits")] Job job)
         {
             if (!ModelState.IsValid)
             {
@@ -106,7 +106,7 @@ namespace JobSeed.Controllers
             kq.Experiences = job.Experiences;
             kq.Qualifications = job.Qualifications;
             kq.Benefits = job.Benefits;
-
+            kq.CategoryId = job.CategoryId;
             _context.Entry(kq).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");

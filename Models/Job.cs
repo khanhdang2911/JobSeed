@@ -29,5 +29,9 @@ namespace JobSeed.Models
         [ForeignKey("JobTypeId")]
         public JobType? JobType{set;get;}
 
+        public int CategoryId{set;get;}
+        [ForeignKey("CategoryId")]
+        public Category? Category{set;get;}
+
     }
 }
