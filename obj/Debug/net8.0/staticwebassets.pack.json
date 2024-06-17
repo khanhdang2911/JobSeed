@@ -1077,6 +1077,58 @@
       "PackagePath": "staticwebassets\\scss\\theme-default.scss"
     },
     {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Airtable.svg",
+      "PackagePath": "staticwebassets\\uploads\\Airtable.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\GitLab.svg",
+      "PackagePath": "staticwebassets\\uploads\\GitLab.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Instacart.svg",
+      "PackagePath": "staticwebassets\\uploads\\Instacart.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Loom.svg",
+      "PackagePath": "staticwebassets\\uploads\\Loom.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Mailchimp.svg",
+      "PackagePath": "staticwebassets\\uploads\\Mailchimp.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Metamask.svg",
+      "PackagePath": "staticwebassets\\uploads\\Metamask.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Notion.svg",
+      "PackagePath": "staticwebassets\\uploads\\Notion.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\PayPal.svg",
+      "PackagePath": "staticwebassets\\uploads\\PayPal.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Ramp.svg",
+      "PackagePath": "staticwebassets\\uploads\\Ramp.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Shopify.svg",
+      "PackagePath": "staticwebassets\\uploads\\Shopify.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Slack.svg",
+      "PackagePath": "staticwebassets\\uploads\\Slack.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Twilio.svg",
+      "PackagePath": "staticwebassets\\uploads\\Twilio.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\UserTesting.svg",
+      "PackagePath": "staticwebassets\\uploads\\UserTesting.svg"
+    },
+    {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo.png",
       "PackagePath": "staticwebassets\\uploads\\logo.png"
     },

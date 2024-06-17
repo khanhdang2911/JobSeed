@@ -1,0 +1,124 @@
+@model Job
+<div style="padding-top: 100px;">
+    <div class="job_details_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="job_details_header">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="~/@Model.ImageLink" style="width:100%;height: 100%;" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a ><h4>@Model.JobName</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> @Model.Location</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> @Model.JobType.JobTitle</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="descript_wrap white-bg">
+                            <div class="single_wrap">
+                                <h4>Job description</h4>
+                                <p>@Html.Raw(Model.JobDescription)</p>
+                            </div>
+                            <div class="single_wrap">
+                                <h4>Responsibility</h4>
+                                <p>@Html.Raw(@Model.Responsibility)</p>
+                            </div>
+                            <div class="single_wrap">
+                                <h4>Qualifications</h4>
+                                    <p>@Html.Raw(Model.Qualifications)
+                                    </p>
+                            </div>
+                            <div class="single_wrap">
+                                <h4>Benefits</h4>
+                                <p>@Html.Raw(Model.Benefits)</p>
+                            </div>
+                        </div>
+                        <div class="apply_job_form white-bg">
+                            <h4>Apply for the job</h4>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input_field">
+                                            <input type="text" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input_field">
+                                            <input type="text" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input_field">
+                                            <input type="text" placeholder="Website/Portfolio link">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <button type="button" id="inputGroupFileAddon03"><i class="fa-solid fa-file"></i>
+                                              </button>
+                                            </div>
+                                            <div class="custom-file">
+                                                @* <label for="">Upload CV</label> *@
+                                                <input type="file">
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input_field">
+                                            <textarea name="#" id="" cols="30" rows="10" placeholder="Coverletter"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="submit_btn">
+                                            <button class="boxed-btn3 w-100" type="submit">Apply Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="job_sumary">
+                            <div class="summery_header">
+                                <h3>Job Summery</h3>
+                            </div>
+                            <div class="job_content">
+                                <ul>
+                                    <li>Published on: <span>@Model.PublishDate.ToString("dd/MM/yyyy")</span></li>
+                                    <li>Salary: <span>@((int)Model.FromSalary)$ - @((int)Model.ToSalary)$/month</span></li>
+                                    <li>Location: <span>@Model.Location</span></li>
+                                    <li>Job Nature: <span> @Model.JobType.JobTitle</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="share_wrap d-flex">
+                            <span>Share at:</span>
+                            <ul>
+                                <li><a href="https://www.facebook.com/"> <i class="fa-brands fa-facebook"></i> </a> </li>
+                                <li><a href="https://www.facebook.com/"> <i class="fa-brands fa-google"></i> </a> </li>
+                                <li><a href="https://www.facebook.com/"> <i class="fa-brands fa-twitter"></i></a> </li>
+                                <li><a href="https://www.facebook.com/"> <i class="fa fa-envelope"></i></a> </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

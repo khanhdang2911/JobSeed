@@ -32,7 +32,7 @@ namespace JobSeed.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,JobTypeId,FormFile,CategoryId,Gender,Experiences,Qualifications,Benefits")] Job job)
+        public async Task<IActionResult> Create([Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,JobTypeId,FormFile,CategoryId,Gender,Experiences,Responsibility,Qualifications,Benefits")] Job job)
         {
             if (!ModelState.IsValid)
             {
@@ -71,7 +71,7 @@ namespace JobSeed.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int? id, [Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,Status,JobTypeId,FormFile,CategoryId,Gender,Experiences,Qualifications,Benefits")] Job job)
+        public async Task<IActionResult> Edit(int? id, [Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,Status,JobTypeId,FormFile,CategoryId,Gender,Responsibility,Experiences,Qualifications,Benefits")] Job job)
         {
             if (!ModelState.IsValid)
             {
@@ -107,6 +107,7 @@ namespace JobSeed.Controllers
             kq.Qualifications = job.Qualifications;
             kq.Benefits = job.Benefits;
             kq.CategoryId = job.CategoryId;
+            kq.Responsibility=job.Responsibility;
             _context.Entry(kq).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -127,7 +128,7 @@ namespace JobSeed.Controllers
         [AllowAnonymous]
         public IActionResult Detail(int id)
         {
-            var kq = _context.jobs.Where(p => p.Id == id).FirstOrDefault();
+            var kq = _context.jobs.Where(p => p.Id == id).Include(c=>c.JobType).FirstOrDefault();
             if (kq == null)
             {
                 return RedirectToAction("NotFound", "Home");
@@ -160,6 +161,11 @@ namespace JobSeed.Controllers
                     _logger.LogError("Field: {Field}, Error: {Error}", error.Key, subError.ErrorMessage);
                 }
             }
+        }
+        public IActionResult AllJobFilter()
+        {
+            var jobFilter =_context.jobs.Include(c=>c.JobType);
+            return View(jobFilter.ToList());
         }
     }
 }

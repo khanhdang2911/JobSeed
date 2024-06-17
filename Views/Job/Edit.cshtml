@@ -1,7 +1,7 @@
 @model Job
 @inject AppDbContext _context;
 <div style="margin-top: 100px; margin-bottom: 100px;">
-    <form id="create-job" method="post" asp-action="Create" style="width: 60%; margin: 0 auto;" enctype="multipart/form-data">
+    <form id="edit-job" method="post" asp-action="Edit" style="width: 60%; margin: 0 auto;" enctype="multipart/form-data">
         <div class="form-group">
             <label asp-for="JobName" class="control-label">Job Title</label>
             <input type="text" asp-for="JobName" class="form-control" id="jobName">
@@ -137,7 +137,7 @@
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('create-job');
+    const form = document.getElementById('edit-job');
     
     form.addEventListener('submit', function (event) {
         let isValid = true;

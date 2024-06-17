@@ -24,6 +24,7 @@ namespace JobSeed.Models
 
         public bool? Gender{set;get;}
         public string? Experiences{set;get;}=string.Empty;
+        public string? Responsibility{set;get;}=string.Empty;
         public string? Qualifications{set;get;}=string.Empty;
         public string? Benefits{set;get;}=string.Empty;
         [ForeignKey("JobTypeId")]
@@ -32,6 +33,6 @@ namespace JobSeed.Models
         public int CategoryId{set;get;}
         [ForeignKey("CategoryId")]
         public Category? Category{set;get;}
-
+        
     }
 }
