@@ -36,7 +36,7 @@ namespace JobSeed.Controllers
         {
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("Id cua job type:"+job.JobTypeId);
+                Console.WriteLine("Id cua job type:" + job.JobTypeId);
                 LogModelStateErrors();
                 return View();
             }
@@ -107,7 +107,7 @@ namespace JobSeed.Controllers
             kq.Qualifications = job.Qualifications;
             kq.Benefits = job.Benefits;
             kq.CategoryId = job.CategoryId;
-            kq.Responsibility=job.Responsibility;
+            kq.Responsibility = job.Responsibility;
             _context.Entry(kq).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -128,7 +128,7 @@ namespace JobSeed.Controllers
         [AllowAnonymous]
         public IActionResult Detail(int id)
         {
-            var kq = _context.jobs.Where(p => p.Id == id).Include(c=>c.JobType).FirstOrDefault();
+            var kq = _context.jobs.Where(p => p.Id == id).Include(c => c.JobType).FirstOrDefault();
             if (kq == null)
             {
                 return RedirectToAction("NotFound", "Home");
@@ -162,42 +162,67 @@ namespace JobSeed.Controllers
                 }
             }
         }
-        public IActionResult AllJobFilter()
+        public IActionResult AllJobFilter(int page = 1)
         {
-            var jobFilter =_context.jobs.Include(c=>c.JobType);
+            int jobPerpages = 4;
+            int totalJobs = _context.jobs.ToList().Count;
+            int totalPage=(int)Math.Ceiling((double)totalJobs/jobPerpages); 
+
+            var jobFilter = _context.jobs.Include(c => c.JobType).AsQueryable();
+            if (page != 0)
+            {
+                jobFilter = jobFilter.Skip((page - 1) * jobPerpages).Take(jobPerpages);
+            }
+            ViewData["totalPage"] = totalPage;
+            ViewData["currentPage"] = page;
             return View(jobFilter.ToList());
         }
-        public async Task<IActionResult> FilterJob(JobFilter jobFilter)
+        public async Task<IActionResult> FilterJob(JobFilter jobFilter, int page = 1)
         {
-            Console.WriteLine("Thong tin:"+jobFilter.SearchKeyword);
-            var allJobFilter=_context.jobs.Include(c=>c.JobType).AsQueryable();
-            if(jobFilter.SearchKeyword!=null)
+            var allJobFilter = _context.jobs.Include(c => c.JobType).AsQueryable();
+            if (jobFilter.SearchKeyword != null)
             {
-                allJobFilter=allJobFilter.Where(c=>c.JobName.Contains(jobFilter.SearchKeyword)
-                ||c.JobDescription.Contains(jobFilter.SearchKeyword)
-                ||c.JobType.JobTitle.Contains(jobFilter.SearchKeyword)
-                ||c.Category.CategoryName.Contains(jobFilter.SearchKeyword)
-                );
+                allJobFilter = allJobFilter.Where(c => c.JobName.Contains(jobFilter.SearchKeyword)
+                    || c.JobDescription.Contains(jobFilter.SearchKeyword)
+                    || c.JobType.JobTitle.Contains(jobFilter.SearchKeyword)
+                    || c.Category.CategoryName.Contains(jobFilter.SearchKeyword));
             }
-            if(jobFilter.Location!=null)
+            if (jobFilter.Location != null)
             {
-                allJobFilter=allJobFilter.Where(c=>c.Location.CompareTo(jobFilter.Location) == 0);
+                allJobFilter = allJobFilter.Where(c => c.Location.CompareTo(jobFilter.Location) == 0);
             }
-            if(jobFilter.Category!=null)
+            if (jobFilter.Category != null)
             {
-                allJobFilter=allJobFilter.Where(c=>c.CategoryId==jobFilter.Category);
+                allJobFilter = allJobFilter.Where(c => c.CategoryId == jobFilter.Category);
             }
-            if(jobFilter.JobType!=null)
+            if (jobFilter.JobType != null)
             {
-                allJobFilter=allJobFilter.Where(c=>c.JobTypeId==jobFilter.JobType);
+                allJobFilter = allJobFilter.Where(c => c.JobTypeId == jobFilter.JobType);
             }
-            if(jobFilter.Gender!=null)
+            if (jobFilter.Gender != null)
             {
-                allJobFilter=allJobFilter.Where(c=>c.Gender==jobFilter.Gender);
+                allJobFilter = allJobFilter.Where(c => c.Gender == jobFilter.Gender);
             }
-            Console.WriteLine("So luong:"+allJobFilter.ToList().Count);
 
-            return View("AllJobFilter",allJobFilter.ToList());
+            // Pagination
+            int jobPerPages = 4;
+            int totalJobs = allJobFilter.Count();
+            int totalPage=(int)Math.Ceiling((double)totalJobs/jobPerPages); 
+
+            if (page != 0)
+            {
+                allJobFilter = allJobFilter.Skip((page - 1) * jobPerPages).Take(jobPerPages);
+            }
+
+            ViewData["SearchKeyword"] = jobFilter.SearchKeyword;
+            ViewData["Location"] = jobFilter.Location;
+            ViewData["Category"] = jobFilter.Category;
+            ViewData["JobType"] = jobFilter.JobType;
+            ViewData["Gender"] = jobFilter.Gender;
+            ViewData["totalPage"] = totalPage;
+            ViewData["currentPage"] = page;
+            return View("AllJobFilter", allJobFilter.ToList());
         }
+
     }
 }
