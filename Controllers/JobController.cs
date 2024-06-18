@@ -167,5 +167,37 @@ namespace JobSeed.Controllers
             var jobFilter =_context.jobs.Include(c=>c.JobType);
             return View(jobFilter.ToList());
         }
+        public async Task<IActionResult> FilterJob(JobFilter jobFilter)
+        {
+            Console.WriteLine("Thong tin:"+jobFilter.SearchKeyword);
+            var allJobFilter=_context.jobs.Include(c=>c.JobType).AsQueryable();
+            if(jobFilter.SearchKeyword!=null)
+            {
+                allJobFilter=allJobFilter.Where(c=>c.JobName.Contains(jobFilter.SearchKeyword)
+                ||c.JobDescription.Contains(jobFilter.SearchKeyword)
+                ||c.JobType.JobTitle.Contains(jobFilter.SearchKeyword)
+                ||c.Category.CategoryName.Contains(jobFilter.SearchKeyword)
+                );
+            }
+            if(jobFilter.Location!=null)
+            {
+                allJobFilter=allJobFilter.Where(c=>c.Location.CompareTo(jobFilter.Location) == 0);
+            }
+            if(jobFilter.Category!=null)
+            {
+                allJobFilter=allJobFilter.Where(c=>c.CategoryId==jobFilter.Category);
+            }
+            if(jobFilter.JobType!=null)
+            {
+                allJobFilter=allJobFilter.Where(c=>c.JobTypeId==jobFilter.JobType);
+            }
+            if(jobFilter.Gender!=null)
+            {
+                allJobFilter=allJobFilter.Where(c=>c.Gender==jobFilter.Gender);
+            }
+            Console.WriteLine("So luong:"+allJobFilter.ToList().Count);
+
+            return View("AllJobFilter",allJobFilter.ToList());
+        }
     }
 }

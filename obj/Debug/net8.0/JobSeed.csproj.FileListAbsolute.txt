@@ -243,9 +243,7 @@ D:\JobSeed\obj\Debug\net8.0\staticwebassets\msbuild.build.JobSeed.props
 D:\JobSeed\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.JobSeed.props
 D:\JobSeed\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.JobSeed.props
 D:\JobSeed\obj\Debug\net8.0\staticwebassets.pack.json
-D:\JobSeed\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\JobSeed\obj\Debug\net8.0\scopedcss\bundle\JobSeed.styles.css
-D:\JobSeed\obj\Debug\net8.0\scopedcss\projectbundle\JobSeed.bundle.scp.css
 D:\JobSeed\obj\Debug\net8.0\JobSeed.csproj.CopyComplete
 D:\JobSeed\obj\Debug\net8.0\JobSeed.dll
 D:\JobSeed\obj\Debug\net8.0\refint\JobSeed.dll
