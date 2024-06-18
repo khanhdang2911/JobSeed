@@ -177,7 +177,7 @@ namespace JobSeed.Controllers
             ViewData["currentPage"] = page;
             return View(jobFilter.ToList());
         }
-        public async Task<IActionResult> FilterJob(JobFilter jobFilter, int page = 1)
+        public IActionResult FilterJob(JobFilter jobFilter, int page = 1)
         {
             var allJobFilter = _context.jobs.Include(c => c.JobType).AsQueryable();
             if (jobFilter.SearchKeyword != null)

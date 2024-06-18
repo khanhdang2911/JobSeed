@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yf2Nxd9xOPvTg3E0Tl7WHd53bqIx0rPdIjON++sBbcs=",
+  "Hash": "7k6nMnGO9OmGkmhzpVILpOXBUbxkTm10Yq4AYSQPcvk=",
   "Source": "JobSeed",
   "BasePath": "_content/JobSeed",
   "Mode": "Default",
@@ -4252,6 +4252,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\Shopify.svg"
+    },
+    {
+      "Identity": "D:\\JobSeed\\wwwroot\\uploads\\SHUTTERSTOCK_1975482467.jpg",
+      "SourceId": "JobSeed",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\JobSeed\\wwwroot\\",
+      "BasePath": "_content/JobSeed",
+      "RelativePath": "uploads/SHUTTERSTOCK_1975482467.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\SHUTTERSTOCK_1975482467.jpg"
     },
     {
       "Identity": "D:\\JobSeed\\wwwroot\\uploads\\Slack.svg",

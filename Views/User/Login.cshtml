@@ -1,37 +1,506 @@
 
-<style>
-    .form-login{
-        border: 2px solid grey;
-        padding: 20px;
-        margin-top: 200px;
-    }
-    .btn{
-        cursor: pointer;
-    }
-</style>
+ <body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- reset -->
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-1: #0c2e60;
+            --color-2: linear-gradient(to right, #39b61a, #11c229);
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: "Roboto", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            width: 1170px;
+            max-width: calc(100% - 48px);
+            margin: 0 auto;
+            font-size: pop;
+        }
+
+        .main-content a {
+            text-decoration: none;
+        }
+
+        .error-message {
+            white-space: normal;
+            margin-top: 4px;
+            font-weight: 500;
+            color: red;
+            display: block;
+            line-height: 1.2;
+            font-size: 15px;
+        }
 
 
-<div class="container" style="width: 40%;min-width: 320px;">
-    <form method="post" asp-action="Login" class="form-login">
-         @* <div asp-validation-summary="ModelOnly"></div>
-        @Html.ValidationSummary(false, "", new { @class = "text-danger" }) *@
-        <div class="form-group">
-            <label class="control-label">Email</label>
-            <input name="Email" class="form-control" type="email">
+        .sign-up .banner {
+            font-family: Roboto, sans-serif;
+            color: rgb(131, 134, 140);
+        }
+
+        .sign-up .row-content {
+            box-sizing: border-box;
+            display: flex;
+            margin-bottom: 0px;
+            text-align: left;
+            align-items: center;
+        }
+
+        .sign-up .content-login {
+            box-sizing: border-box;
+            display: block;
+            flex-basis: 50%;
+            height: 100%;
+
+            max-width: 50%;
+
+            padding-left: 15px
+            padding-right: 15px;
+            margin-bottom: 40px;
+            position: relative;
+            text-align: left;
+            width: 480px;
+
+        }
+
+        .sign-up .content-login .content-box {
+            box-sizing: border-box;
+            display: block;
+            height: 117px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .sign-up .content-login .sl-form {
+            box-sizing: border-box;
+            display: block;
+            text-align: left;
+
+            width: 450px;
+        }
+
+        .sign-up .content-login .content-box h2 {
+            color: black;
+            display: block;
+            font-size: 30px;
+            font-weight: 600;
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 23px;
+            text-align: left;
+        }
+
+        .sign-up .content-login .content-box p {
+            box-sizing: border-box;
+            color: rgb(131, 134, 140);
+            display: block;
+            font-size: 15px;
+            font-weight: 400;
+            height: 54px;
+            line-height: 27px;
+            margin-block-end: 16px;
+            margin-bottom: 16px;
+            width: 450px;
+        }
+
+        .sign-up .content-login .sl-form label {
+            box-sizing: border-box;
+            color: rgb(12, 46, 96);
+            cursor: default;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            height: 27px;
+            line-height: 27px;
+            width: 450px;
+        }
+
+        .sign-up .content-login .sl-form input {
+
+            border-color: rgb(224 228 230);
+            margin-bottom: 10px;
+            border-style: solid;
+            border-width: 0.8px;
+            border-image-repeat: stretch;
+            border-image-slice: 100%;
+            border-image-width: 1;
+
+            box-sizing: border-box;
+            color: rgb(0, 0, 0);
+            cursor: text;
+            display: block;
+
+            font-size: 15px;
+            font-stretch: 100%;
+
+            font-weight: 400;
+            height: 48.6px;
+            letter-spacing: normal;
+            line-height: 27px;
+            overflow-x: visible;
+            overflow-y: visible;
+            padding-block-end: 10px;
+            padding-block-start: 10px;
+            padding: 10px 15px;
+            padding-inline-end: 15px;
+            padding-inline-start: 15px;
+
+            text-align: start;
+            text-rendering: auto;
+            text-shadow: none;
+            width: 450px;
+        }
+
+        .sign-up .content-login .sl-form .form-check-label {
+            box-sizing: border-box;
+            color: rgb(0, 0, 0);
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 400;
+            height: 27px;
+            line-height: 27px;
+            width: 220.5px;
+        }
+
+        .sign-up .content-login .sl-form .form-check {
+            box-sizing: border-box;
+            color: rgb(131, 134, 140);
+            display: flex;
+            font-size: 15px;
+            font-weight: 400;
+            height: 27px;
+            line-height: 27px;
+            margin-bottom: 30px;
+            position: relative;
+            width: 450px;
+        }
+
+        .sign-up .sl-form .form-check .form-check-input {
+            border-color: #ccc;
+            padding: 5px;
+            font-size: 15px;
+            margin-right: 5px;
+            margin-top: 7px;
+            width: 13px;
+            height: 13px;
+        }
+
+        .sign-up .sl-form button {
+            display: inline;
+            border-radius: 50px;
+            color: #fff;
+            background: linear-gradient(to right, #2eaf0d, #0daa2f);
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            font-size: 13px;
+            fone-weight: 500px;
+            line-height: 10.4px;
+            width: 120px;
+        }
+
+        .sign-up .terms-and-condition {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .sign-up .login-account {
+            text-decoration: none;
+            color: orange;
+        }
+
+        .sign-up .login-account:hover {
+            text-decoration: underline;
+        }
+
+        .sign-up .terms-and-condition:hover {
+            text-decoration: underline;
+        }
+
+        .sign-up .sl-form button:hover {
+            color: #000;
+        }
+
+        .sign-up .sl-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .sign-up .notice a {
+            color: #ef470d;
+        }
+
+        .sign-up .notice a:hover {
+            text-decoration: underline;
+        }
+
+        .sign-up .form-check a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <main>
+        <div class="sign-up">
+            <section class="banner login-registration">
+                <div class="main-content">
+                    <div class="row-content">
+                        <div class="content-login">
+                            <div>
+                                <div class="content-box">
+                                    <h2>Login</h2>
+                                </div>
+                                <form asp-action="Login" method="post" class="sl-form" onsubmit="return validateForm(event)">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input name="Email" type="email" placeholder="Enter email" required
+                                            oninput="validateEmail()">
+                                        <p id="email-error" class="error-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input name="Password" type="password" placeholder="Enter password" required
+                                            oninput="validatePassword()">
+                                        <p id="password-error" class="error-message"></p>
+                                    </div>
+                                    
+
+                                    <button type="submit" class="btn btn-filled btn-round"
+                                        style="width: 100%">Login</button>
+                                    <p class="notice">You lose account? <a asp-action="ForgotPassword">Forgot Password</a></p>
+                                </form>
+                            </div>
+
+                            <script>
+                                function validateName() {
+                                    const name = document.querySelector('[name="Name"]').value;
+                                    const nameError = document.getElementById('name-error');
+                                    const regex = /^[a-zA-ZÀ-ỹ\s]+$/u;
+
+                                    if (!regex.test(name)) {
+                                        nameError.textContent = 'Name must contain only letters and spaces.';
+                                        return false;
+                                    } else {
+                                        nameError.textContent = '';
+                                        return true;
+                                    }
+                                }
+
+                                function validatePhone() {
+                                    const phone = document.querySelector('[name="Phone"]').value;
+                                    const phoneError = document.getElementById('phone-error');
+                                    const regex = /^\d{10}$/;
+
+                                    if (!regex.test(phone)) {
+                                        phoneError.textContent = 'Phone number must be 10 digits.';
+                                        return false;
+                                    } else {
+                                        phoneError.textContent = '';
+                                        return true;
+                                    }
+                                }
+
+                                function validateEmail() {
+                                    const email = document.querySelector('[name="Email"]').value;
+                                    const emailError = document.getElementById('email-error');
+                                    const regex = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+
+                                    if (!regex.test(email)) {
+                                        emailError.textContent = 'Email must be in the correct format.';
+                                        return false;
+                                    } else {
+                                        emailError.textContent = '';
+                                        return true;
+                                    }
+                                }
+
+                                function validatePassword() {
+                                    const password = document.querySelector('[name="Password"]').value;
+                                    const passwordError = document.getElementById('password-error');
+                                    const regex = /^(?=.*\S).{8,}$/;
+
+                                    if (!regex.test(password) || /\s/.test(password)) {
+                                        passwordError.textContent = 'Password must be at least 8 characters long and contain no spaces.';
+                                        return false;
+                                    } else {
+                                        passwordError.textContent = '';
+                                        return true;
+                                    }
+                                }
+                                function validateConfirmPassword() {
+                                const password = document.querySelector('[name="Password"]').value;
+                                const confirmPassword = document.querySelector('[name="ConfirmPassword"]').value;
+                                const confirmPasswordError = document.getElementById('confirm-password-error');
+
+                                if (password !== confirmPassword) {
+                                    confirmPasswordError.textContent = 'Passwords do not match.';
+                                    return false;
+                                } else {
+                                    confirmPasswordError.textContent = '';
+                                    return true;
+                                }
+                            }
+
+                                function validateForm(event) {
+                                    const isNameValid = validateName();
+                                    const isPhoneValid = validatePhone();
+                                    const isEmailValid = validateEmail();
+                                    const isPasswordValid = validatePassword();
+                                    const isConfirmPasswordValid = validateConfirmPassword(); 
+
+                                    if (!isNameValid || !isPhoneValid || !isEmailValid || !isPasswordValid||!isConfirmPasswordValid) {
+                                        event.preventDefault();
+                                        return false;
+                                    }
+                                    return true;
+                                }
+                            </script>
+                        </div>
+                        <div class="vector-img">
+                            <img src="~/uploads/SHUTTERSTOCK_1975482467.jpg" alt="" style="width: 100%; height: 435px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="form-group">
-            <label class="control-label">Mật khẩu</label>
-            <input type="password" name="Password" class="form-control">
-        </div>
-        <hr>
-        <input type="submit" value="Login" class="btn btn-info">
-    </form>
-    <a asp-action="forgotpassword" style="text-decoration: none;color:black;font-weight: 500;">Forgot Password</a>
-    |<a asp-action="Register" style="text-decoration: none;color:black;font-weight: 500;">Register</a>
-</div>
-
-@section scripts{
-        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    }
-
+    </main>
+</body>
