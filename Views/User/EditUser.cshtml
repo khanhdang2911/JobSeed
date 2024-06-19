@@ -2,53 +2,532 @@
 @inject AppDbContext _context
 @model Users
 @{
-    int UserId=int.Parse(User.Claims.FirstOrDefault(c=>c.Type=="Id")?.Value.ToString());
+    int UserId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "Id")?.Value.ToString());
 }
 
-<div style="border: 1px solid rgba(43, 37, 37, 0.527); width: 70%; margin: 50px auto 25px;"></div>
+@* <div style="border: 1px solid rgba(43, 37, 37, 0.527); width: 70%; margin: 50px auto 25px;"></div>
 <div class="profile">
-    <div class="info">
-        <form  method="post" asp-action="EditUser" asp-route-UsersId="@Model.Id" style="margin: 0 auto;">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for ="Email" class="control-label" ></label>
-                <input type="text" asp-for="Email" class="form-control">
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
+<div class="info">
+<form method="post" asp-action="EditUser" asp-route-UsersId="@Model.Id" style="margin: 0 auto;">
+<div asp-validation-summary="All" class="text-danger"></div>
+<div class="form-group">
+<label asp-for ="Email" class="control-label" ></label>
+<input type="text" asp-for="Email" class="form-control">
+<span asp-validation-for="Email" class="text-danger"></span>
+</div>
 
-            <div class="form-group">
-                    @* <label asp-for ="Password" class="control-label" ></label> *@
-   
-                    <input type="hidden" asp-for="Password" class="form-control" value="@Model.Password">
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-            
-            <div class="form-group">
-                <label asp-for ="Name" class="control-label" ></label>
-                <input type="text" asp-for="Name" class="form-control">
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for ="Phone" class="control-label" ></label>
-                <input type="text" asp-for="Phone" class="form-control">
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <a asp-action="ChangePassword" asp-controller="User" asp-route-id="@Model.Id">Đổi mật khẩu</a>
-            <hr>
-            
+<div class="form-group">
 
-            <input type="submit" class="btn btn-success" value="Lưu thông tin">
-        </form>
-    </div>
+<input type="hidden" asp-for="Password" class="form-control" value="@Model.Password">
+<span asp-validation-for="Password" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+<label asp-for ="Name" class="control-label" ></label>
+<input type="text" asp-for="Name" class="form-control">
+<span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+<label asp-for ="Phone" class="control-label" ></label>
+<input type="text" asp-for="Phone" class="form-control">
+<span asp-validation-for="Phone" class="text-danger"></span>
+</div>
+<a asp-action="ChangePassword" asp-controller="User" asp-route-id="@Model.Id">Đổi mật khẩu</a>
+<hr>
+
+
+<input type="submit" class="btn btn-success" value="Lưu thông tin">
+</form>
+</div>
 
 </div>
 <style>
-    .profile{
-        display: flex;
-        justify-content: center;
-        gap: 140px;
-    }
-    .info{
-        width: 300px;
-    }
-</style>
+.profile{
+display: flex;
+justify-content: center;
+gap: 140px;
+}
+.info{
+width: 300px;
+}
+</style> *@
+
+
+<body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../owlcarousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- reset -->
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-1: #0c2e60;
+            --color-2: linear-gradient(to right, #ef3e0f, #ffb800);
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: "Roboto", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            width: 1170px;
+            max-width: calc(100% - 48px);
+            margin: 0 auto;
+            font-size: pop;
+        }
+
+        .main-content a {
+            text-decoration: none;
+        }
+
+        .error-message {
+            white-space: normal;
+            margin-top: 4px;
+            font-weight: 500;
+            color: red;
+            display: block;
+            line-height: 1.2;
+            font-size: 15px;
+        }
+
+
+        .profile-block {
+            padding-top:100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .profile-block {
+            min-height: 100vh;
+        }
+
+        .profile-box {
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+        }
+
+        .profile-sidebar {
+            width: 23%;
+            margin-right: 2%;
+        }
+
+        .profile-title {
+            background: linear-gradient(90deg, #29b60b, #29b60b);
+            font-size: 1.7rem;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 28px;
+            padding-right: 10px;
+            color: #fff;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            font-weight: 500;
+        }
+
+        .profile-box .navbar-profile li a {
+            padding: 13px 25px;
+            font-size: 15px;
+            color: #000;
+            display: block;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        .profile-box .navbar-profile li a:hover {
+            background-color: #e9ecef;
+        }
+
+        .profile-box .navbar-profile li i {
+            margin-right: 12px;
+            width: 13px;
+            vertical-align: unset;
+        }
+
+        .profile-right {
+            width: 75%;
+        }
+
+        .profile-right .profile-box {
+            padding: 20px;
+        }
+
+        .profile-right__title {
+            font-size: 20px;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            color: #635f5f;
+            font-weight: 700;
+            display: inline-block;
+            /* border-bottom: 2px solid #ff8100; */
+        }
+
+        .profile-right__content {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .change-avt-box {
+            align-items: start;
+            justify-content: start;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin-right: 2%;
+        }
+
+        .personal-infor-box {
+            width: 100%;
+        }
+
+        .change-avt-box figure {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 18px;
+        }
+
+        .change-avt-box figure img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #969595;
+            object-fit: cover;
+        }
+
+        .btn__profile {
+            width: 180px;
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+            background-color: #007bff;
+            color: #FFF;
+            padding: 10px 8px;
+            border-radius: 4px;
+            cursor:pointer;
+        }
+
+        .change-avt__form input[type=file] {
+            font-size: 12px;
+            width: 100%;
+        }
+
+        .personal-infor-box {
+            display: flex;
+            gap: 100px;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 20px;
+            padding-right: 0;
+        }
+
+        .btn__submit-personal-infor {
+            font-size: 18px;
+            float: right;
+            margin: 18px 0;
+        }
+
+        .personal-infor__form {
+            width: 60%;
+        }
+
+        .personal-infor__form div {
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .personal-infor__form div label {
+            width: 33%;
+            margin-right: 2%;
+            font-size: 16px;
+            font-weight: 450;
+        }
+
+        .personal-infor__form div input {
+            width: 65%;
+            border-radius: 4px;
+            border: 1px solid #969595;
+            height: 36px;
+            font-weight: 400;
+            padding: 10px 10px;
+        }
+
+        .personal-infor__form div label i {
+            margin-right: 8px;
+        }
+    </style>
+
+
+
+    <main>
+        <div class="main-content">
+            <div class="profile-block">
+                <div class="profile-sidebar">
+                    <div class="profile-box">
+                        <h1 class="profile-title">Account information</h1>
+                        <div class="navbar-profile">
+                            <ul>
+                                <li>
+                                    <a href="/my-profile"><i class="fa-solid fa-user"></i>Personal information</a>
+                                </li>
+                                <li>
+                                    <a href="/my-deposits"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
+                                        job</a>
+                                </li>
+                                <li>
+                                    <a href="/change-password"><i class="fa-solid fa-key"></i>Change Password</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <div class="profile-box">
+                        <div class="personal-infor">
+                            <h2 class="profile-right__title">Personal information</h2>
+                            <div class="profile-right__content">
+
+                                <div class="personal-infor-box">
+                                    
+                                    <form asp-action="EditUser" asp-route-usersId="@Model.Id"
+                                        class="personal-infor__form" enctype="multipart/form-data">
+                                        <div class="change-avt-box">
+                                            <figure>
+                                                <img src="~/@Model.ImageLink" alt="" class="personal-infor__avt" >
+                                            </figure>
+                                            <input asp-for="FormFile" id="imageUpload" type="file"
+                                                class="btn__profile btn__change-avt">
+                                        </div>
+                                        <div class="name">
+                                            <label for="Name"><i class="fa-solid fa-user-tie"></i>Your
+                                                Name</label>
+                                            <input type="text" asp-for="Name" id="Name" placeholder="Enter your name"
+                                                required>
+                                        </div>
+                                        <span class="error-message" id="nameError"></span>
+                                        <div class="email">
+                                            <label for="Email"><i class="fa-solid fa-envelope"></i>Your
+                                                Email</label>
+                                            <input asp-for="Email" type="email" id="Email"
+                                                placeholder="Enter your email" required>
+                                        </div>
+                                        <span class="error-message" id="emailError"></span>
+                                        <div class="phone">
+                                            <label for="Phone"><i class="fa-solid fa-phone"></i>Phone Number
+                                            </label>
+                                            <input asp-for="Phone" type="text" id="Phone"
+                                                placeholder="Enter your number phone" required>
+                                        </div>
+                                        <span class="error-message" id="phoneError"></span>
+                                        @* password *@
+                                        <input type="hidden" asp-for="Password" class="form-control" value="@Model.Password">
+                                        <button type="submit" class="btn__profile btn__submit-personal-infor">Update
+                                        </button>
+                                    </form>
+                                   <script>
+                                        $(document).ready(function () {
+                                            function validateInput() {
+                                                var isValid = true;
+
+                                                var nameInput = $('#Name').val().trim();
+                                                if (!/^[a-zA-ZÀ-Ỹà-ỹ\s]+$/.test(nameInput)) {
+                                                    $('#nameError').text("Name must contain only letters and cannot be empty.");
+                                                    isValid = false;
+                                                } else {
+                                                    $('#nameError').text("");
+                                                }
+
+                                                var emailInput = $('#Email').val().trim();
+                                                if (!isValidEmail(emailInput)) {
+                                                    $('#emailError').text("Please enter a valid email address.");
+                                                    isValid = false;
+                                                } else {
+                                                    $('#emailError').text("");
+                                                }
+
+                                                var phoneInput = $('#Phone').val().trim();
+                                                if (!/^(0\d{9})$/.test(phoneInput)) {
+                                                    $('#phoneError').text("Phone number must start with 0 and contain exactly 10 digits.");
+                                                    isValid = false;
+                                                } else {
+                                                    $('#phoneError').text("");
+                                                }
+
+                                                return isValid;
+                                            }
+
+                                            $('#Name, #Email, #Phone').on('input', function () {
+                                                validateInput();
+                                            });
+
+                                            function isValidEmail(email) {
+                                                var emailPattern = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+                                                return emailPattern.test(email);
+                                            }
+
+                                            $('.personal-infor__form').submit(function (event) {
+                                                if (!validateInput()) {
+                                                    event.preventDefault();
+                                                }
+                                            });
+                                        });
+                                    </script>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

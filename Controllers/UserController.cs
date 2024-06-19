@@ -16,9 +16,11 @@ public class UserController : Controller
     private readonly ILogger<UserController> _logger;
     private readonly HashPasswordByBC _hashPasswordByBC;
     private readonly AppDbContext _context;
-    public UserController(ILogger<UserController> logger,AppDbContext context,HashPasswordByBC hashPasswordByBC)
+    private readonly IWebHostEnvironment _environment;
+    public UserController(ILogger<UserController> logger,AppDbContext context,HashPasswordByBC hashPasswordByBC,IWebHostEnvironment environment)
     {
         _context=context;
+        _environment=environment;
         _logger = logger;
         _hashPasswordByBC=hashPasswordByBC;
     }
@@ -273,7 +275,7 @@ public class UserController : Controller
         return View(kq);
     }
     [HttpPost]
-    public async Task<IActionResult> EditUser(int UsersId,[Bind("Email,Password,Name,Phone")] Users users)
+    public async Task<IActionResult> EditUser(int UsersId,[Bind("Email,Password,Name,Phone,FormFile")] Users users)
     {
         
         var kq=_context.users.Where(u=>u.Id==UsersId).FirstOrDefault();
@@ -284,10 +286,20 @@ public class UserController : Controller
         
         if(!ModelState.IsValid)
         {
+            LogModelStateErrors();
             return View(kq);
         }
-
-
+        if (users.FormFile != null)
+        {
+                Console.WriteLine("Da vao day luon roi");
+                var filepath = Path.Combine(_environment.WebRootPath, "uploads", users.FormFile.FileName);
+                if (!System.IO.File.Exists(filepath))
+                {
+                    using FileStream fileStream = new FileStream(filepath, FileMode.Create);
+                    users.FormFile.CopyTo(fileStream);
+                }
+                users.ImageLink = $"uploads/{users.FormFile.FileName}";
+        }
         var checkUserExists1=_context.users.Where(u=>u.Email==users.Email&&u.Id!=UsersId).FirstOrDefault();
         if(checkUserExists1!=null)
         {
@@ -306,6 +318,10 @@ public class UserController : Controller
         kq.Password=users.Password;
         kq.Name=users.Name;
         kq.Phone=users.Phone;
+        if(users.ImageLink!=null)
+        {
+            kq.ImageLink=users.ImageLink;
+        }
         await _context.SaveChangesAsync();
         return RedirectToAction("Index","Home");
     }
@@ -358,6 +374,21 @@ public class UserController : Controller
         return RedirectToAction("EditUser",new {UsersId=id});
     }
     
+    private void LogModelStateErrors()
+        {
+            var errors = ModelState
+                .Where(x => x.Value.Errors.Count > 0)
+                .Select(x => new { x.Key, x.Value.Errors })
+                .ToArray();
+
+            foreach (var error in errors)
+            {
+                foreach (var subError in error.Errors)
+                {
+                    _logger.LogError("Field: {Field}, Error: {Error}", error.Key, subError.ErrorMessage);
+                }
+            }
+        }
     
 
     

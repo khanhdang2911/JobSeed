@@ -17,6 +17,9 @@ namespace JobSeed.Models
         [Phone(ErrorMessage ="Enter the phone number in the wrong format")]
         public string Phone{set;get;}
         public string Password{set;get;}
+        [NotMapped]
+        public IFormFile? FormFile{set;get;}
+        public string? ImageLink{set;get;}
         public ICollection<UsersRole>? usersRoles{set;get;}
 
 

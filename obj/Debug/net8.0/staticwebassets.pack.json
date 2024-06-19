@@ -905,6 +905,18 @@
       "PackagePath": "staticwebassets\\uploads\\UserTesting.svg"
     },
     {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\avatar1.png",
+      "PackagePath": "staticwebassets\\uploads\\avatar1.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\company_logo_10.png",
+      "PackagePath": "staticwebassets\\uploads\\company_logo_10.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\download.jpg",
+      "PackagePath": "staticwebassets\\uploads\\download.jpg"
+    },
+    {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo.png",
       "PackagePath": "staticwebassets\\uploads\\logo.png"
     },

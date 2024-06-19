@@ -36,7 +36,6 @@ namespace JobSeed.Controllers
         {
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("Id cua job type:" + job.JobTypeId);
                 LogModelStateErrors();
                 return View();
             }

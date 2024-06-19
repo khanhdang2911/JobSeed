@@ -1,3 +1,17 @@
+@inject AppDbContext _context
+@{
+    Users user=new Users();
+    int userId = 0;
+    if(User.Identity!=null)
+    {
+        if(User.Identity.IsAuthenticated)
+        {
+            userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+        }
+    }
+    user=_context.users.Where(c=>c.Id==userId).FirstOrDefault();
+    
+}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -33,7 +47,7 @@
 <body>
     <!-- header-start -->
     <header>
-        <div class="header-area" style="background-color: #212529;">
+        <div class="header-area" style="background-color: #31485f;">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid ">
                     <div class="header_bottom_border">
@@ -65,22 +79,34 @@
                                         @if(User.Identity.IsAuthenticated)
                                         {
                                             <div class="phone_num d-none d-xl-block">
-                                            <a asp-controller="User" asp-action="Logout">
-                                                <i class="fa-solid fa-right-from-bracket"></i>
-                                                Log out
-                                            </a>
-                                        </div>
+                                                <a asp-controller="User" asp-action="Logout">
+                                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                                    Log out
+                                                </a>
+                                            </div>
+                                            if(user.ImageLink!=null)
+                                            {
+                                                <div class="d-none d-lg-block">
+                                                <a  asp-action="EditUser" asp-controller="User" asp-route-usersid="@userId">
+                                                    <img src="~/@user.ImageLink" alt="" style="border-radius: 50%;width:40px;">
+                                                </a>
+                                            </div>
+                                            }
+                                            else{
+                                            <div class="d-none d-lg-block">
+                                                <a  asp-action="EditUser" asp-controller="User" asp-route-usersid="@userId">
+                                                    <img src="~/uploads/avatar1.png" alt="" style="border-radius: 50%;width:40px;">
+                                                </a>
+                                            </div>
+                                            }
                                         }
                                             else{
-                                            <div class="phone_num d-none d-xl-block">
-                                                <a asp-controller="User" asp-action="Login">Log in</a>
+                                            <div class="phone_num d-none d-xl-block" style="background-color: #00d363;padding:5px;width:70px;text-align: center;border-radius:15px;">
+                                                <a asp-controller="User" asp-action="Login" style="font-weight: 600;">Log In</a>
                                             </div>
                                         }
                                     }
                                     
-                                    <div class="d-none d-lg-block">
-                                        <a class="boxed-btn3" href="#">Post a Job</a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -95,7 +121,7 @@
     </header>
     <!-- header-end -->
 
-    <div style="margin-top: 150px;">@RenderBody()</div>
+    <div >@RenderBody()</div>
 
 
     <!-- footer start -->
