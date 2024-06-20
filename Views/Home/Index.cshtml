@@ -35,18 +35,18 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="section_title">
-                        <h3>Job Listing</h3>
+                        <h3>Job Recommended</h3>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="brouse_job text-right">
-                        <a href="jobs.html" class="boxed-btn4">Browse More Job</a>
+                        <a asp-controller="Job" asp-action="AllJobFilter" class="boxed-btn4">Browse More Job</a>
                     </div>
                 </div>
             </div>
             <div class="job_lists">
                 <div class="row">
-                    @foreach(var item in _context.jobs.Include(c=>c.JobType))
+                    @foreach(var item in _context.jobs.Take(5).Include(c=>c.JobType))
                     {
                     <div class="col-lg-12 col-md-12">
                         <div class="single_jobs white-bg d-flex justify-content-between">

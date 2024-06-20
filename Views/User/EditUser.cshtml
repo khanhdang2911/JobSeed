@@ -238,7 +238,7 @@ width: 300px;
 
 
         .profile-block {
-            padding-top:100px;
+            padding-top:150px;
             display: flex;
             justify-content: space-between;
         }
@@ -414,14 +414,14 @@ width: 300px;
                         <div class="navbar-profile">
                             <ul>
                                 <li>
-                                    <a href="/my-profile"><i class="fa-solid fa-user"></i>Personal information</a>
+                                    <a asp-action="EditUser" asp-route-usersId="@Model.Id"><i class="fa-solid fa-user"></i>Personal information</a>
                                 </li>
                                 <li>
-                                    <a href="/my-deposits"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
+                                    <a asp-action="HistoryUploadJob" asp-route-usersId="@Model.Id"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
                                         job</a>
                                 </li>
                                 <li>
-                                    <a href="/change-password"><i class="fa-solid fa-key"></i>Change Password</a>
+                                    <a asp-action="ChangePassword" asp-route-id="@Model.Id"><i class="fa-solid fa-key"></i>Change Password</a>
                                 </li>
                             </ul>
                         </div>
@@ -471,6 +471,12 @@ width: 300px;
                                         </button>
                                     </form>
                                    <script>
+                                        let fileAvatar=document.querySelector("#imageUpload");
+                                        let imgElement=document.querySelector(".personal-infor__avt");
+                                        fileAvatar.onchange=function(e)
+                                        {
+                                            imgElement.src=URL.createObjectURL(e.target.files[0]);
+                                        }
                                         $(document).ready(function () {
                                             function validateInput() {
                                                 var isValid = true;

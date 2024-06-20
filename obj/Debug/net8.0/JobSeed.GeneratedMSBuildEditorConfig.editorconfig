@@ -42,10 +42,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/JobSeed/Views/Home/test.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0ZXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/JobSeed/Views/Job/AllJobFilter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEFsbEpvYkZpbHRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -100,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/JobSeed/Views/User/ForgotPasswordConfirmCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGb3Jnb3RQYXNzd29yZENvbmZpcm1Db2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JobSeed/Views/User/HistoryUploadJob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxIaXN0b3J5VXBsb2FkSm9iLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/JobSeed/Views/User/Login.cshtml]

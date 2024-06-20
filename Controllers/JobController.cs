@@ -32,6 +32,7 @@ namespace JobSeed.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("JobName,JobDescription,CompanyName,Location,FromSalary,ToSalary,JobTypeId,FormFile,CategoryId,Gender,Experiences,Responsibility,Qualifications,Benefits")] Job job)
         {
             if (!ModelState.IsValid)
@@ -49,6 +50,8 @@ namespace JobSeed.Controllers
                 }
                 job.ImageLink = $"uploads/{job.FormFile.FileName}";
             }
+            int usersId=int.Parse(User.Claims.FirstOrDefault(c=>c.Type=="Id").Value);
+            job.EmployerId=usersId;
             await _context.jobs.AddAsync(job);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -222,6 +225,19 @@ namespace JobSeed.Controllers
             ViewData["currentPage"] = page;
             return View("AllJobFilter", allJobFilter.ToList());
         }
+        [Authorize]
+        public async Task<IActionResult> UpdateState(int id)
+        {
+            var job=await _context.jobs.Where(c=>c.Id==id).FirstOrDefaultAsync();
+            if(job==null)
+            {
+                return RedirectToAction("NotFound","Home");
+            }
+            job.State=true;
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index","Home");
+        }
+        
 
     }
 }

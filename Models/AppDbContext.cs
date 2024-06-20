@@ -22,6 +22,10 @@ namespace JobSeed.Models
             modelBuilder.Entity<UsersRole>(options=>{
                 options.HasKey(u=>new{u.UsersId, u.RoleId});
             });
+
+            modelBuilder.Entity<UsersJob>(options=>{
+                options.HasKey(u=>new{u.UsersId, u.JobId});
+            });
         }
         public DbSet<Job> jobs { get; set; }
         public DbSet<JobType> jobTypes{set;get;}
@@ -29,5 +33,6 @@ namespace JobSeed.Models
         public DbSet<Users> users {set;get;}
         public DbSet<UsersRole> usersRoles {set;get;}
         public DbSet<Category> categories{set;get;}
+        public DbSet<UsersJob> usersJobs{set;get;}
     }
 }

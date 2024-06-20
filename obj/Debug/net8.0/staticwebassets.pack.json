@@ -909,6 +909,10 @@
       "PackagePath": "staticwebassets\\uploads\\avatar1.png"
     },
     {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\choCute.jpg",
+      "PackagePath": "staticwebassets\\uploads\\choCute.jpg"
+    },
+    {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\company_logo_10.png",
       "PackagePath": "staticwebassets\\uploads\\company_logo_10.png"
     },
@@ -919,6 +923,14 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo.png",
       "PackagePath": "staticwebassets\\uploads\\logo.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo3.png",
+      "PackagePath": "staticwebassets\\uploads\\logo3.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo4.png",
+      "PackagePath": "staticwebassets\\uploads\\logo4.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.JobSeed.Microsoft.AspNetCore.StaticWebAssets.props",

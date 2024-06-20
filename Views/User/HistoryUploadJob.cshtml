@@ -1,5 +1,8 @@
-
-
+@inject AppDbContext _context
+@{
+    int usersId=int.Parse(User.Claims.FirstOrDefault(c=>c.Type=="Id").Value);
+    var allJob=_context.jobs.Where(c=>c.EmployerId==usersId).ToList();
+}
 <body>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -175,6 +178,7 @@
 
         /* chung */
         .profile-block {
+            padding-top: 150px;
             display: flex;
             justify-content: space-between;
         }
@@ -195,7 +199,7 @@
         }
 
         .profile-title {
-            background: linear-gradient(90deg, #ff8100, #f05225);
+            background: linear-gradient(90deg, #62ad25, #54b82c);
             font-size: 1.7rem;
             padding-top: 15px;
             padding-bottom: 15px;
@@ -320,22 +324,22 @@
     </style>
 
     <main>
-        <div class="main-content" style="margin-top: 150px;">
+        <div class="main-content">
             <div class="profile-block">
                 <div class="profile-sidebar">
                     <div class="profile-box">
                         <h1 class="profile-title">Account information</h1>
                         <div class="navbar-profile">
                             <ul>
-                                <li>
-                                    <a href="/my-profile"><i class="fa-solid fa-user"></i>Personal information</a>
+                               <li>
+                                    <a asp-action="EditUser" asp-route-usersId="@Model.Id"><i class="fa-solid fa-user"></i>Personal information</a>
                                 </li>
                                 <li>
-                                    <a href="/my-deposits"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
+                                    <a asp-action="HistoryUploadJob" asp-route-usersId="@Model.Id"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
                                         job</a>
                                 </li>
                                 <li>
-                                    <a href="/change-password"><i class="fa-solid fa-key"></i>Change Password</a>
+                                    <a asp-action="ChangePassword" asp-route-id="@Model.Id"><i class="fa-solid fa-key"></i>Change Password</a>
                                 </li>
                             </ul>
                         </div>
@@ -346,7 +350,7 @@
                         <div class="courses-participated">
                             <div class="block-1">
                                 <h2 class="profile-right__title">History upload job</h2>
-                                <a href="" class="btn btn__add-new-post-profile"
+                                <a asp-action="Create" asp-controller="Job" class="btn btn__add-new-post-profile"
                                     style="background: #0c2e60; width: 150px; margin-bottom: 0">Post a new job</a>
                             </div>
                             <div class="table">
@@ -354,17 +358,32 @@
                                     <thead>
                                         <tr>
                                             <th onclick="sortTable(0)">ID</th>
-                                            <th onclick="sortTable(1)">Employer</th>
+                                            <th onclick="sortTable(1)">Job Name</th>
                                             <th onclick="sortTable(2)">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr style="align-items: center">
-                                            <td>
-                                            </td>
-                                            <td></td>
-                                            <td style="color: green; font-weight: 500">
-                                            </td>
+                                            @foreach(var item in allJob)
+                                            {
+                                                <td>JobSeed_@item.Id
+                                                </td>
+                                                <td>@item.JobName</td>
+                                                    @if(item.State==false)
+                                                    {
+                                                    <td style="color: red; font-weight: 500">
+                                                        Not activated
+                                                    </td>
+                                                    }
+                                                    else
+                                                    {
+                                                    <td style="color: green; font-weight: 500">
+                                                        Activated
+                                                    </td>
+                                                    }
+                                                                                                    
+                                            }
+                                            
                                         </tr>
                                     </tbody>
                                     <script>
@@ -430,4 +449,3 @@
 
 
 </body>
-

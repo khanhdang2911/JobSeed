@@ -33,6 +33,16 @@ namespace JobSeed.Models
         public int CategoryId{set;get;}
         [ForeignKey("CategoryId")]
         public Category? Category{set;get;}
+
+        public List<UsersJob>? usersJobs{set;get;}
+        
+        
+        [ForeignKey("EmployerId")]
+        public Users? Employer{set;get;}
+        public int EmployerId{set;get;}
+        //State
+        public bool State{set;get;}=false;
+
         
     }
 }

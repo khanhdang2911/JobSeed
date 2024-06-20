@@ -21,6 +21,7 @@ namespace JobSeed.Models
         public IFormFile? FormFile{set;get;}
         public string? ImageLink{set;get;}
         public ICollection<UsersRole>? usersRoles{set;get;}
+        public List<UsersJob>? usersJobs{set;get;}
 
 
 
