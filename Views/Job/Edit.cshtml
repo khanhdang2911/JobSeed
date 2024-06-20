@@ -35,7 +35,7 @@
         <div class="input-group-icon mt-10">
             <div class="icon"><i class="fa-solid fa-list"></i></div>
             <div class="form-select" id="default-select">
-                <select id="CategoryId" asp-for="CategoryId">
+                <select id="categoryId" asp-for="CategoryId">
                     <option value="-1">Category</option>
                     @foreach (var item in _context.categories)
                     {

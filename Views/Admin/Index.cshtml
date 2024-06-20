@@ -1,0 +1,172 @@
+@model List<Users>
+@inject AppDbContext _context
+
+@{
+    Layout="_LayoutAdmin";
+}
+
+<style>
+    .head-content{
+        padding: 20px 0;
+        background-color: rgb(255, 255, 255);
+        position: sticky;
+        top:100px;
+    }
+    thead{
+        position: sticky;
+        top:165px;
+    }
+    .user-manage-detail{
+        margin-top: 40px;
+        @* width: 80%; *@
+    }
+    @* head-content *@
+    .head-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .input-search{
+        border-radius: 999px;
+        border: 0.5px solid black;
+        padding: 4px;
+        margin-left: 20px;
+    }
+    .btn-search{
+        border: none;
+        background-color: #5751e1;
+        color: white;
+        border-radius: 50%;
+    }
+    @*  *@
+    .action{
+        padding: 5px;
+    }
+    .delete-btn{
+        cursor: pointer;
+    }
+    .btn-custom{
+        padding: 5px;
+        border-radius: 8px;
+        color:rgb(252, 252, 252);
+    }
+    .btn-custom:hover{
+        color:rgb(252, 252, 252);
+    }
+    .btn-add{
+        background-color: #3eb93c;
+    }
+
+
+    
+</style>
+<div class="container user-manage-detail">
+    <div class="head-content">
+        @* <a asp-action="AddUser" class="btn-custom btn-add"><i class="fa-solid fa-plus"></i>Create new user</a> *@
+        <form method="post" asp-action="SearchUser" class="form-search">
+            <input type="text" name="email" required class="input-search" placeholder="Search For user">
+            <button type="submit"  class=btn-search><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <div class="row justify-content-center">
+        <div class="">
+            <table class="table table-bordered table-hover table-responsive">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Email</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Role access</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Email</td>
+                            <td>@item.Name</td>
+                            <td>@item.Phone</td>
+                            <td>
+                                @foreach(var role in item.usersRoles)
+                                {
+                                    string roleName=_context.roles.Where(r=>r.Id==role.RoleId).Select(r=>r.RoleName).FirstOrDefault();
+                                    <li>@roleName</li>
+                                }
+                            </td>
+                            <td>
+                                <a class="action delete-btn" data-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
+                                <a asp-action="EditUser" asp-controller="User" asp-route-UsersId="@item.Id" class="action"><i class="fa-solid fa-wrench"></i></a>
+                                <a class="action" asp-action="AddRoleForUser" asp-route-id="@item.Id"><i class="fa-solid fa-user-tie"></i></a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Style for modal */
+    .modal {
+        width: 350px;
+        height: 150px;
+        display: none; /* Ẩn modal mặc định */
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    /* Style for overlay */
+    .overlay {
+        display: none; /* Ẩn overlay mặc định */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối */
+    }
+</style>
+
+<div class="overlay" id="overlay"></div> <!-- Overlay để tối màn hình -->
+
+<div id="confirmDeleteModal" class="modal">
+    <span class="close">&times;</span>
+    <p>Bạn có chắc chắn muốn xóa không?</p>
+    <button id="confirmDeleteBtn" class="btn btn-danger" style="border-radius: 6px;">Xóa</button>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        // Lấy tất cả các nút xóa và gán sự kiện click cho mỗi nút
+        var deleteButtons = document.querySelectorAll('.delete-btn');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                var UsersId = this.getAttribute('data-id');
+                document.getElementById('confirmDeleteModal').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block'; // Hiển thị overlay
+                
+                // Xác nhận xóa khi người dùng nhấn nút "Xóa"
+                document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+                    window.location.href = '/Admin/DeleteUser/' + UsersId;
+                });
+                
+                // Ẩn modal và overlay khi người dùng nhấn nút "Đóng"
+                document.querySelector('.close').addEventListener('click', function() {
+                    document.getElementById('confirmDeleteModal').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none'; // Ẩn overlay
+                });
+            });
+        });
+    </script>
+}

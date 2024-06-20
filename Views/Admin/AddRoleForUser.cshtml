@@ -1,0 +1,64 @@
+@{
+    var user=ViewData["user"] as Users;
+}
+@model List<RoleCheckbox>
+@if(user!=null)
+{
+    <div id="form-submit-role" class="border border-primary" style="margin: 0 auto;width: 50%;">
+        <form method="post" class="m-5" asp-action="AddRoleForUser" asp-route-id="@user.Id" style="margin: 0 auto;">
+            <h4>Assign permissions to user @user.Name</h4>
+            @* <span class="error error-submit-role">You have not selected a role for the user !</span> *@
+            <div>
+                @for (var item = 0; item < @Model.Count(); item++)
+                {
+                    <input type="checkbox" asp-for="@Model[item].IsChecked" class="form-check-input-role" />
+                    <label class="form-check-label" asp-for="@Model[item].IsChecked">
+                        @Model[item].RoleName
+                    </label>
+                    <input type="hidden" asp-for="@Model[item].Id" />
+                    <input type="hidden" asp-for="@Model[item].RoleName" />
+                    <br />
+                }
+            </div>
+            <div>
+                <input class="btn-primary mt-3" type="submit" value="Save" style="border-radius: 999px;" />
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <h1>
+Can't find user
+    </h1>
+}
+@* <script>
+    let inputCheck=document.querySelectorAll(".form-check-input-role");
+    let formSubmit=document.querySelector("#form-submit-role");
+    let errorSubmit=document.querySelector(".error-submit-role");
+
+    let check=false;
+    formSubmit.onsubmit=function(e)
+    {
+        inputCheck.forEach(input=>{
+            if(input.checked==true)
+            {
+                check=true;
+            }
+        });
+        if(check==false)
+        {
+            e.preventDefault();
+            
+            errorSubmit.style.display="block";
+        }
+    }
+
+    //Khi nhap thi bo cai error di
+    inputCheck.forEach(input=>{
+        input.oninput=function(e)
+        {
+            errorSubmit.style.display="none";
+        }
+    })
+</script> *@

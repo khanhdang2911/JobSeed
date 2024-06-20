@@ -1,0 +1,98 @@
+@model List<Role>
+
+@{
+    int dem=0;
+}
+<div class="container">
+    <a asp-action="AddRole" class="btn btn-info">Tạo role mới</a>
+    <hr>
+    <div class="row justify-content-center" style="width:50%;margin: 0 auto;">
+        <div class="col-md-10">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Role name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        ++dem;
+                        <tr>
+                            <td>@dem</td>
+                            <td>@item.RoleName</td>
+                            <td>
+                                <a asp-action="EditRole" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+                                <button type="button" class="btn btn-danger delete-btn" data-id="@item.Id">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Style for modal */
+    .modal {
+        width: 350px;
+        height: 150px;
+        display: none; /* Ẩn modal mặc định */
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    /* Style for overlay */
+    .overlay {
+        display: none; /* Ẩn overlay mặc định */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối */
+    }
+</style>
+
+<div class="overlay" id="overlay"></div> <!-- Overlay để tối màn hình -->
+
+<div id="confirmDeleteModal" class="modal">
+    <span class="close">&times;</span>
+    <p>Bạn có chắc chắn muốn xóa không?</p>
+    <button id="confirmDeleteBtn" class="btn-danger" style="border-radius: 6px;">Xóa</button>
+</div>
+
+@section Scripts {
+    <script>
+        // Lấy tất cả các nút xóa và gán sự kiện click cho mỗi nút
+        var deleteButtons = document.querySelectorAll('.delete-btn');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                var RoleId = this.getAttribute('data-id');
+                document.getElementById('confirmDeleteModal').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block'; // Hiển thị overlay
+                
+                // Xác nhận xóa khi người dùng nhấn nút "Xóa"
+                document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+                    window.location.href = '/Admin/DeleteRole/' + RoleId;
+                });
+                
+                // Ẩn modal và overlay khi người dùng nhấn nút "Đóng"
+                document.querySelector('.close').addEventListener('click', function() {
+                    document.getElementById('confirmDeleteModal').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none'; // Ẩn overlay
+                });
+            });
+        });
+    </script>
+}

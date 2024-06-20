@@ -9,14 +9,6 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\css\\candidates.css",
-      "PackagePath": "staticwebassets\\css\\candidates.css"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\css\\candidates.map",
-      "PackagePath": "staticwebassets\\css\\candidates.map"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\css\\flaticon.css",
       "PackagePath": "staticwebassets\\css\\flaticon.css"
     },
@@ -31,6 +23,10 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\css\\jquery-ui.css",
       "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\layout_admin.css",
+      "PackagePath": "staticwebassets\\css\\layout_admin.css"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\css\\magnific-popup.css",
@@ -57,16 +53,8 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\css\\style.map",
-      "PackagePath": "staticwebassets\\css\\style.map"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\css\\theme-default.css",
       "PackagePath": "staticwebassets\\css\\theme-default.css"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\css\\theme-default.map",
-      "PackagePath": "staticwebassets\\css\\theme-default.map"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\css\\themify-icons.css",
@@ -931,6 +919,10 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo4.png",
       "PackagePath": "staticwebassets\\uploads\\logo4.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\shincute.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shincute.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.JobSeed.Microsoft.AspNetCore.StaticWebAssets.props",

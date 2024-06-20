@@ -363,12 +363,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach(var item in allJob)
+                                        {
                                         <tr style="align-items: center">
-                                            @foreach(var item in allJob)
-                                            {
                                                 <td>JobSeed_@item.Id
                                                 </td>
-                                                <td>@item.JobName</td>
+                                                <td><a asp-action="Detail" asp-controller="Job" asp-route-id="@item.Id">@item.JobName</a></td>
                                                     @if(item.State==false)
                                                     {
                                                     <td style="color: red; font-weight: 500">
@@ -381,10 +381,8 @@
                                                         Activated
                                                     </td>
                                                     }
-                                                                                                    
-                                            }
-                                            
                                         </tr>
+                                        }
                                     </tbody>
                                     <script>
                                         function sortTable(n) {

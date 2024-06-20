@@ -21,7 +21,7 @@ namespace JobSeed.Controllers
 
         public IActionResult Index()
         {
-            var allJob = (from p in _context.jobs select p).Include(p => p.JobType).ToList();
+            var allJob = (from p in _context.jobs where p.State==true select p).Include(p => p.JobType).ToList();
             return View(allJob);
         }
 
@@ -52,6 +52,10 @@ namespace JobSeed.Controllers
             }
             int usersId=int.Parse(User.Claims.FirstOrDefault(c=>c.Type=="Id").Value);
             job.EmployerId=usersId;
+            if(User.IsInRole("Admin"))
+            {
+                job.State=true;
+            }
             await _context.jobs.AddAsync(job);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -135,6 +139,15 @@ namespace JobSeed.Controllers
             {
                 return RedirectToAction("NotFound", "Home");
             }
+            //check xem da active hay chua
+            if(User.IsInRole("Admin"))
+            {
+
+            }
+            else if(kq.State==false)
+            {
+                return RedirectToAction("NotFound","Home");
+            }
             return View(kq);
         }
 
@@ -170,7 +183,7 @@ namespace JobSeed.Controllers
             int totalJobs = _context.jobs.ToList().Count;
             int totalPage=(int)Math.Ceiling((double)totalJobs/jobPerpages); 
 
-            var jobFilter = _context.jobs.Include(c => c.JobType).AsQueryable();
+            var jobFilter = _context.jobs.Where(c=>c.State==true).Include(c => c.JobType).AsQueryable();
             if (page != 0)
             {
                 jobFilter = jobFilter.Skip((page - 1) * jobPerpages).Take(jobPerpages);
@@ -179,9 +192,9 @@ namespace JobSeed.Controllers
             ViewData["currentPage"] = page;
             return View(jobFilter.ToList());
         }
-        public IActionResult FilterJob(JobFilter jobFilter, int page = 1)
+        public IActionResult FilterJob(JobFilter jobFilter ,int? category,int page = 1)
         {
-            var allJobFilter = _context.jobs.Include(c => c.JobType).AsQueryable();
+            var allJobFilter = _context.jobs.Where(c=>c.State==true).Include(c => c.JobType).AsQueryable();
             if (jobFilter.SearchKeyword != null)
             {
                 allJobFilter = allJobFilter.Where(c => c.JobName.Contains(jobFilter.SearchKeyword)
@@ -205,7 +218,11 @@ namespace JobSeed.Controllers
             {
                 allJobFilter = allJobFilter.Where(c => c.Gender == jobFilter.Gender);
             }
-
+            //check category(Truong hop dac biet)
+            if(category!=null)
+            {
+                allJobFilter=_context.jobs.Where(c => c.CategoryId==category);
+            }
             // Pagination
             int jobPerPages = 4;
             int totalJobs = allJobFilter.Count();
@@ -225,7 +242,8 @@ namespace JobSeed.Controllers
             ViewData["currentPage"] = page;
             return View("AllJobFilter", allJobFilter.ToList());
         }
-        [Authorize]
+        [Authorize(Roles="Admin")]
+
         public async Task<IActionResult> UpdateState(int id)
         {
             var job=await _context.jobs.Where(c=>c.Id==id).FirstOrDefaultAsync();
@@ -235,8 +253,29 @@ namespace JobSeed.Controllers
             }
             job.State=true;
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index");
         }
+        [Authorize(Roles ="Admin")]
+        public async Task<IActionResult> JobNotActive()
+        {
+            var jobs=await _context.jobs.Where(c=>c.State==false).Include(c=>c.JobType).ToListAsync();
+            return View("Index",jobs);
+            
+        }
+        
+        [Authorize(Roles ="Admin")]
+        public async Task<IActionResult> BlockJob(int id)
+        {
+            var job=await _context.jobs.Where(c=>c.Id==id).FirstOrDefaultAsync();
+            if(job==null)
+            {
+                return RedirectToAction("NotFound","Home");
+            }
+            job.State=false;
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
         
 
     }

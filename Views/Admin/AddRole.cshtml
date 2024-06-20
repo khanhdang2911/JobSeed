@@ -1,0 +1,11 @@
+@model Role
+<form method="post" asp-action="AddRole" style="width: 20%;margin: 0 auto;">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for ="RoleName" class="control-label" ></label>
+        <input type="text" asp-for="RoleName" class="form-control">
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+    <hr>
+    <input type="submit" class="btn btn-success" value="Tạo role mới">
+</form>
