@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "evWPkRWf+Lb5JVBheXEpTUgaZRVzKwKe9VPqcpayX/A=",
+  "Hash": "Kj57R3N74wnFRnem3w7N88JhdIK9gz4xoZWIv+sfSGU=",
   "Source": "JobSeed",
   "BasePath": "_content/JobSeed",
   "Mode": "Default",
@@ -1953,25 +1953,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
-    },
-    {
-      "Identity": "D:\\JobSeed\\wwwroot\\js\\contact.js",
-      "SourceId": "JobSeed",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\JobSeed\\wwwroot\\",
-      "BasePath": "_content/JobSeed",
-      "RelativePath": "js/contact.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\contact.js"
     },
     {
       "Identity": "D:\\JobSeed\\wwwroot\\js\\gijgo.min.js",
@@ -4214,6 +4195,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\Mailchimp.svg"
+    },
+    {
+      "Identity": "D:\\JobSeed\\wwwroot\\uploads\\maruko.jpg",
+      "SourceId": "JobSeed",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\JobSeed\\wwwroot\\",
+      "BasePath": "_content/JobSeed",
+      "RelativePath": "uploads/maruko.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\maruko.jpg"
     },
     {
       "Identity": "D:\\JobSeed\\wwwroot\\uploads\\Metamask.svg",

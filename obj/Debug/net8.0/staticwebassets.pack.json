@@ -409,10 +409,6 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\contact.js",
-      "PackagePath": "staticwebassets\\js\\contact.js"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\js\\gijgo.min.js",
       "PackagePath": "staticwebassets\\js\\gijgo.min.js"
     },
@@ -919,6 +915,10 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo4.png",
       "PackagePath": "staticwebassets\\uploads\\logo4.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\maruko.jpg",
+      "PackagePath": "staticwebassets\\uploads\\maruko.jpg"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\shincute.jpg",

@@ -276,6 +276,39 @@ namespace JobSeed.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> ApplyJob(UsersJob usersJob)
+        {
+            if (usersJob.FormFile != null)
+            {
+                Console.WriteLine("Co vao day khong cu");
+                var filepath = Path.Combine(_environment.WebRootPath, "uploads", usersJob.FormFile.FileName);
+                if (!System.IO.File.Exists(filepath))
+                {
+                    using FileStream fileStream = new FileStream(filepath, FileMode.Create);
+                    usersJob.FormFile.CopyTo(fileStream);
+                }
+                usersJob.CV = $"uploads/{usersJob.FormFile.FileName}";
+            }
+            else{
+                Console.WriteLine("Vao day khong huhu");
+            }
+
+            await _context.usersJobs.AddAsync(usersJob);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index","Home");
+        }
+        public async Task<IActionResult> DetailJobApply(int jobid, int userid)
+        {
+            var userJob = await _context.usersJobs.Where(c => c.JobId == jobid && c.UsersId == userid).FirstOrDefaultAsync();
+            if(userJob==null)
+            {
+                return RedirectToAction("NotFound","Home");
+            }
+            ViewData["user"]=_context.users.Find(userid);
+            return View(userJob);
+        }
         
 
     }

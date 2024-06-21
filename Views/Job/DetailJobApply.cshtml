@@ -1,0 +1,82 @@
+@using JobSeed.Models
+@Model UsersJob
+@{
+    var user=ViewBag.user as Users;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Applications</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .application-container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .application-header {
+            border-bottom: 2px solid #007bff;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+        .application-header h5 {
+            color: #007bff;
+        }
+        .application-body p {
+            margin-bottom: 10px;
+        }
+        .application-footer {
+            border-top: 1px solid #e9ecef;
+            margin-top: 15px;
+            padding-top: 10px;
+            text-align: right;
+        }
+        .application-footer small {
+            color: #6c757d;
+        }
+        .application-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .application-link:hover {
+            text-decoration: underline;
+        }
+        .cv-viewer {
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5" style="padding-top: 100px;">
+        <h1 class="mb-4">Job Applications</h1>
+        <div class="application-container">
+            <div class="application-header">
+                <h5>@user.Name</h5>
+            </div>
+            <div class="application-body">
+                <p>Email: @user.Email</p>
+                <p>Social Link Account: <a href="https://www.linkedin.com/in/johndoe" class="application-link">Employee Account</a></p>
+                <p>Cover Letter:</p>
+                <p>@Html.Raw(Model.Coverletter)</p>
+                <p>CV:</p>
+                <p>~/@Model.CV</p>
+                <iframe src="~/@Model.CV" class="cv-viewer"></iframe>
+            </div>
+            <div class="application-footer">
+                <small>Applied on: 2024-06-21</small>
+            </div>
+        </div>
+        <!-- Repeat for more applications -->
+    </div>
+</body>
+</html>
