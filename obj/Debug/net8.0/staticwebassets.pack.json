@@ -409,10 +409,6 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\gijgo.min.js",
-      "PackagePath": "staticwebassets\\js\\gijgo.min.js"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\js\\imagesloaded.pkgd.min.js",
       "PackagePath": "staticwebassets\\js\\imagesloaded.pkgd.min.js"
     },
@@ -453,40 +449,8 @@
       "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\mail-script.js",
-      "PackagePath": "staticwebassets\\js\\mail-script.js"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\nice-select.min.js",
-      "PackagePath": "staticwebassets\\js\\nice-select.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\owl.carousel.min.js",
-      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\plugins.js",
-      "PackagePath": "staticwebassets\\js\\plugins.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\popper.min.js",
-      "PackagePath": "staticwebassets\\js\\popper.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\range.js",
-      "PackagePath": "staticwebassets\\js\\range.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\scrollIt.js",
-      "PackagePath": "staticwebassets\\js\\scrollIt.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\jquery-1.12.4.min.js",
@@ -495,14 +459,6 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\modernizr-3.5.0.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\modernizr-3.5.0.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\waypoints.min.js",
-      "PackagePath": "staticwebassets\\js\\waypoints.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\wow.min.js",
-      "PackagePath": "staticwebassets\\js\\wow.min.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\LICENSE",
