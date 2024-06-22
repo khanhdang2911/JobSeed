@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kj57R3N74wnFRnem3w7N88JhdIK9gz4xoZWIv+sfSGU=",
+  "Hash": "zVUXxucBGCkCWxrXMvNJpCx2rdUwFf631xC8uJF+ado=",
   "Source": "JobSeed",
   "BasePath": "_content/JobSeed",
   "Mode": "Default",
@@ -4233,6 +4233,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\Metamask.svg"
+    },
+    {
+      "Identity": "D:\\JobSeed\\wwwroot\\uploads\\Nghia_TTS.pdf",
+      "SourceId": "JobSeed",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\JobSeed\\wwwroot\\",
+      "BasePath": "_content/JobSeed",
+      "RelativePath": "uploads/Nghia_TTS.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Nghia_TTS.pdf"
     },
     {
       "Identity": "D:\\JobSeed\\wwwroot\\uploads\\Notion.svg",

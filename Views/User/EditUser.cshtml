@@ -238,7 +238,7 @@ width: 300px;
 
 
         .profile-block {
-            padding-top:150px;
+            padding-top: 150px;
             display: flex;
             justify-content: space-between;
         }
@@ -349,7 +349,7 @@ width: 300px;
             color: #FFF;
             padding: 10px 8px;
             border-radius: 4px;
-            cursor:pointer;
+            cursor: pointer;
         }
 
         .change-avt__form input[type=file] {
@@ -414,14 +414,21 @@ width: 300px;
                         <div class="navbar-profile">
                             <ul>
                                 <li>
-                                    <a asp-action="EditUser" asp-route-usersId="@Model.Id"><i class="fa-solid fa-user"></i>Personal information</a>
+                                    <a asp-action="EditUser" asp-route-usersId="@Model.Id"><i
+                                            class="fa-solid fa-user"></i>Personal information</a>
                                 </li>
                                 <li>
-                                    <a asp-action="HistoryUploadJob" asp-route-usersId="@Model.Id"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
+                                    <a asp-action="HistoryUploadJob" asp-route-usersId="@Model.Id"><i
+                                            class="fa-solid fa-file-arrow-up"></i></i>History upload
                                         job</a>
                                 </li>
                                 <li>
-                                    <a asp-action="ChangePassword" asp-route-id="@Model.Id"><i class="fa-solid fa-key"></i>Change Password</a>
+                                    <a asp-action="HistoryApplyJob" asp-route-usersId="@Model.Id"
+                                        asp-route-id="@Model.Id"><i class="fa-solid fa-building-user"></i>History Apply Job</a>
+                                </li>
+                                <li>
+                                    <a asp-action="ChangePassword" asp-route-id="@Model.Id"><i
+                                            class="fa-solid fa-key"></i>Change Password</a>
                                 </li>
                             </ul>
                         </div>
@@ -434,12 +441,12 @@ width: 300px;
                             <div class="profile-right__content">
 
                                 <div class="personal-infor-box">
-                                    
+
                                     <form asp-action="EditUser" asp-route-usersId="@Model.Id"
                                         class="personal-infor__form" enctype="multipart/form-data">
                                         <div class="change-avt-box">
                                             <figure>
-                                                <img src="~/@Model.ImageLink" alt="" class="personal-infor__avt" >
+                                                <img src="~/@Model.ImageLink" alt="" class="personal-infor__avt">
                                             </figure>
                                             <input asp-for="FormFile" id="imageUpload" type="file"
                                                 class="btn__profile btn__change-avt">
@@ -466,16 +473,16 @@ width: 300px;
                                         </div>
                                         <span class="error-message" id="phoneError"></span>
                                         @* password *@
-                                        <input type="hidden" asp-for="Password" class="form-control" value="@Model.Password">
+                                        <input type="hidden" asp-for="Password" class="form-control"
+                                            value="@Model.Password">
                                         <button type="submit" class="btn__profile btn__submit-personal-infor">Update
                                         </button>
                                     </form>
-                                   <script>
-                                        let fileAvatar=document.querySelector("#imageUpload");
-                                        let imgElement=document.querySelector(".personal-infor__avt");
-                                        fileAvatar.onchange=function(e)
-                                        {
-                                            imgElement.src=URL.createObjectURL(e.target.files[0]);
+                                    <script>
+                                        let fileAvatar = document.querySelector("#imageUpload");
+                                        let imgElement = document.querySelector(".personal-infor__avt");
+                                        fileAvatar.onchange = function (e) {
+                                            imgElement.src = URL.createObjectURL(e.target.files[0]);
                                         }
                                         $(document).ready(function () {
                                             function validateInput() {

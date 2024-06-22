@@ -130,6 +130,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGb3Jnb3RQYXNzd29yZENvbmZpcm1Db2RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/JobSeed/Views/User/HistoryApplyJob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxIaXN0b3J5QXBwbHlKb2IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/JobSeed/Views/User/HistoryUploadJob.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxIaXN0b3J5VXBsb2FkSm9iLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -140,6 +144,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/JobSeed/Views/User/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JobSeed/Views/User/ViewApplyJob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWaWV3QXBwbHlKb2IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/JobSeed/Views/_ViewImports.cshtml]

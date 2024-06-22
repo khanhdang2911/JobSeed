@@ -403,6 +403,65 @@ public class UserController : Controller
 
         return View(user);
     }
+    [Authorize]
+    public async Task<IActionResult> ViewApplyJob()
+    {
+        int usersId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+        var user = await _context.users.Where(c => c.Id == usersId).FirstOrDefaultAsync();
+        var alljobOfUser= _context.jobs.Where(c=>c.EmployerId==usersId);
+        if (user == null)
+        {
+            return RedirectToAction("NotFound", "Home");
+        }
+        var usersJob = (from c in _context.usersJobs join p in alljobOfUser on c.JobId equals p.Id select c).Include(c=>c.Users).
+        Include(c=>c.Job).ToList();
+        ViewData["user"] = user;
+        return View(usersJob);
+    }
+    [Authorize]
+    public async Task<IActionResult> HistoryApplyJob()
+    {
+        int usersId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+        var user = await _context.users.Where(c => c.Id == usersId).FirstOrDefaultAsync();
+        if (user == null)
+        {
+            return RedirectToAction("NotFound", "Home");
+        }
+        var usersJob = await _context.usersJobs.Where(c => c.UsersId == usersId).Include(c => c.Job).Include(c => c.Users).ToListAsync();
+        ViewData["user"] = user;
+        return View(usersJob);
+    }
+    public async Task<IActionResult> FilterApplication(string? searchName,string? statusFilter)
+    {
+        int usersId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+        var user = await _context.users.Where(c => c.Id == usersId).FirstOrDefaultAsync();
+        var alljobOfUser= _context.jobs.Where(c=>c.EmployerId==usersId);
+        if (user == null)
+        {
+            return RedirectToAction("NotFound", "Home");
+        }
+        var usersJob = (from c in _context.usersJobs join p in alljobOfUser on c.JobId equals p.Id select c).Include(c=>c.Users).
+        Include(c=>c.Job).AsQueryable();
+        if(string.IsNullOrWhiteSpace(searchName)==false)
+        {
+            usersJob=usersJob.Where(c => c.Users.Name.Contains(searchName));
+        }
+        if(string.IsNullOrWhiteSpace(statusFilter)==false)
+        {
+            if(statusFilter=="new")
+            {
+                usersJob=usersJob.Where(c => c.State==null);
+            }
+            else if(statusFilter=="accepted")
+            {
+                usersJob=usersJob.Where(c => c.State==true);
+            }
+            else
+            {
+                usersJob=usersJob.Where(c => c.State==false);
+            }
+        }
 
-
+        return View("ViewApplyJob",usersJob.ToList());
+    }
 }

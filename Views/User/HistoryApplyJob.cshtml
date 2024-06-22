@@ -1,7 +1,8 @@
 @inject AppDbContext _context
+@model List<UsersJob>
 @{
     int usersId=int.Parse(User.Claims.FirstOrDefault(c=>c.Type=="Id").Value);
-    var allJob=_context.jobs.Where(c=>c.EmployerId==usersId).ToList();
+    var user=ViewBag.user as Users;
 }
 <body>
     <link
@@ -332,18 +333,18 @@
                         <div class="navbar-profile">
                             <ul>
                                <li>
-                                    <a asp-action="EditUser" asp-route-usersId="@Model.Id"><i class="fa-solid fa-user"></i>Personal information</a>
+                                    <a asp-action="EditUser" asp-route-usersId="@user.Id"><i class="fa-solid fa-user"></i>Personal information</a>
                                 </li>
                                 <li>
-                                    <a asp-action="HistoryUploadJob" asp-route-usersId="@Model.Id"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
+                                    <a asp-action="HistoryUploadJob" asp-route-usersId="@user.Id"><i class="fa-solid fa-file-arrow-up"></i></i>History upload
                                         job</a>
                                 </li>
                                 <li>
-                                    <a asp-action="HistoryApplyJob" asp-route-usersId="@Model.Id"><i class="fa-solid fa-building-user"></i>History apply
+                                    <a asp-action="HistoryApplyJob" asp-route-usersId="@user.Id"><i class="fa-solid fa-building-user"></i>History apply
                                         job</a>
                                 </li>
                                 <li>
-                                    <a asp-action="ChangePassword" asp-route-id="@Model.Id"><i class="fa-solid fa-key"></i>Change Password</a>
+                                    <a asp-action="ChangePassword" asp-route-id="@user.Id"><i class="fa-solid fa-key"></i>Change Password</a>
                                 </li>
                             </ul>
                         </div>
@@ -354,35 +355,40 @@
                         <div class="courses-participated">
                             <div class="block-1">
                                 <h2 class="profile-right__title">History upload job</h2>
-                                <a asp-action="ViewApplyJob" asp-controller="User" asp-route-usersId="@Model.Id" class="btn btn__add-new-post-profile"
-                                    style="background: #0c2e60; width: 150px; margin-bottom: 0">View Detail</a>
+                                <a asp-action="AllJobFilter" asp-controller="Job" class="btn btn__add-new-post-profile"
+                                    style="background: #0c2e60; width: 150px; margin-bottom: 0">Find more job</a>
                             </div>
                             <div class="table">
                                 <table class="courses-participated-table" id="table-sort">
                                     <thead>
                                         <tr>
-                                            <th onclick="sortTable(0)">ID</th>
+                                            <th onclick="sortTable(0)">Applied Date</th>
                                             <th onclick="sortTable(1)">Job Name</th>
                                             <th onclick="sortTable(2)">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach(var item in allJob)
+                                        @foreach(var item in Model)
                                         {
                                         <tr style="align-items: center">
-                                                <td>JobSeed_@item.Id
+                                                <td>@item.ApplyDate
                                                 </td>
-                                                <td><a asp-action="Detail" asp-controller="Job" asp-route-id="@item.Id">@item.JobName</a></td>
+                                                <td><a asp-action="Detail" asp-controller="Job" asp-route-id="@item.JobId">@item.Job.JobName</a></td>
                                                     @if(item.State==false)
-                                                    {
+                                                    { 
                                                     <td style="color: red; font-weight: 500">
-                                                        Not activated
+                                                        Rejected
                                                     </td>
                                                     }
-                                                    else
+                                                    else if(item.State==true)
                                                     {
                                                     <td style="color: green; font-weight: 500">
-                                                        Activated
+                                                        Accepted
+                                                    </td>
+                                                    }
+                                                    else{
+                                                        <td style="color: rgb(228, 225, 54); font-weight: 500">
+                                                        Pending...
                                                     </td>
                                                     }
                                         </tr>

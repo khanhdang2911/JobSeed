@@ -1,0 +1,289 @@
+@inject AppDbContext _context
+@model List<UsersJob>
+@{
+    var newApply = Model.Where(c => c.State == null).ToList();
+    var rejectedApply = Model.Where(c => c.State == false).ToList();
+    var acceptedApply = Model.Where(c => c.State == true).ToList();
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Applications</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dashboard {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .stats p {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .search-filter input,
+        .search-filter select,
+        .search-filter button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-filter input,
+        .search-filter select {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .search-filter button {
+            flex: 0 0 100px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .applications-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .applications-table th,
+        .applications-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .applications-table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .applications-table tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .modalCustom {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modalCustom-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin-top: 150px; margin-bottom: 100px;">
+        <div class="dashboard">
+            <h1>Job Applications</h1>
+            <div class="stats">
+                <p>Total Applications: @Model.Count</p>
+                <p>New Applications: @newApply.Count</p>
+                <p>Rejected: @rejectedApply.Count</p>
+                <p>Accepted: @acceptedApply.Count</p>
+            </div>
+            <div class="search-filter">
+                <form class="form-inline" method="post" asp-action="FilterApplication">
+                    <input type="text" name="searchName" class="form-control mb-2 mr-sm-2" placeholder="Search by name...">
+                    <select name="statusFilter" class="form-control mb-2 mr-sm-2">
+                        <option value="">All&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="new">New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="accepted">Accepted&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="rejected">Rejected&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary mb-2">Search</button>
+                </form>
+            </div>
+            <table class="applications-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Date Applied</th>
+                        <th>Position</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Users.Name</td>
+                            <td>@item.Users.Email</td>
+                            <td>@item.Users.Phone</td>
+                            <td>@item.ApplyDate.ToString("dd/MM/yyyy")</td>
+                            <td>@item.Job.JobName</td>
+                            @if (item.State == null)
+                            {
+                                <td>
+                                    <button class="btn btn-warning"
+                                        onclick="viewDetails(@item.JobId,@item.UsersId)">View</button>
+                                    <a style="color: white;" class="btn btn-success" data-toggle="modal" data-target="#myModalAccept-@item.JobId-@item.UsersId">
+                                        Accept
+                                    </a>
+
+                                    <div class="modal fade" id="myModalAccept-@item.JobId-@item.UsersId">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Confirm</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure to accept this application?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a asp-action="UpdateStateJob" asp-controller="Job" asp-route-jobid="@item.JobId"
+                                                        asp-route-usersid="@item.UsersId" asp-route-state="true" type="button" class="btn btn-success">Accept</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a style="color: white;" class="btn btn-danger" data-toggle="modal" data-target="#myModalReject-@item.JobId-@item.UsersId">
+                                        Reject
+                                    </a>
+
+                                    <div class="modal fade" id="myModalReject-@item.JobId-@item.UsersId">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Confirm</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure to reject this application?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a asp-action="UpdateStateJob" asp-controller="Job" asp-route-jobid="@item.JobId"
+                                                        asp-route-usersid="@item.UsersId" asp-route-state="false" type="button" class="btn btn-danger">Reject</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            }
+                            else if (item.State == true)
+                            {
+                                <td>
+                                    <button class="btn btn-warning"
+                                        onclick="viewDetails(@item.JobId,@item.UsersId)">View</button>
+                                    <button disabled class="btn btn-success">Accepted</button>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <button class="btn btn-warning"
+                                        onclick="viewDetails(@item.JobId,@item.UsersId)">View</button>
+                                    <button disabled class="btn btn-danger">Rejected</button>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div id="detailsModalCustom-@item.JobId-@item.UsersId" class="modalCustom">
+                <div class="modalCustom-content">
+                    <span class="close" onclick="closeModalCustom(@item.JobId,@item.UsersId)">&times;</span>
+                    <h2>Applicant Details</h2>
+                    <p><strong>Name:</strong> @item.Users.Name</p>
+                    <p><strong>Email:</strong> @item.Users.Email</p>
+                    <p><strong>Phone:</strong> @item.Users.Phone</p>
+                    <p><strong>Cover Letter:</strong></p>
+                    <p>@Html.Raw(item.Coverletter)</p>
+                    <iframe src="~/@item.CV" width="100%" height="600px"></iframe>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script>
+        function viewDetails(jobid, usersid) {
+            document.getElementById('detailsModalCustom-' + jobid + "-" + usersid).style.display = 'block';
+        }
+
+        function closeModalCustom(jobid, usersid) {
+            document.getElementById('detailsModalCustom-' + jobid + "-" + usersid).style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

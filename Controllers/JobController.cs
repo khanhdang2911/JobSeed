@@ -299,16 +299,29 @@ namespace JobSeed.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Index","Home");
         }
-        public async Task<IActionResult> DetailJobApply(int jobid, int userid)
+        public async Task<IActionResult> DetailJobApply(int jobid, int usersid)
         {
-            var userJob = await _context.usersJobs.Where(c => c.JobId == jobid && c.UsersId == userid).FirstOrDefaultAsync();
+            var userJob = await _context.usersJobs.Where(c => c.JobId == jobid && c.UsersId == usersid).FirstOrDefaultAsync();
             if(userJob==null)
             {
                 return RedirectToAction("NotFound","Home");
             }
-            ViewData["user"]=_context.users.Find(userid);
+            ViewData["user"]=_context.users.Find(usersid);
             return View(userJob);
         }
+        [Authorize]
+        public async Task<IActionResult> UpdateStateJob(int jobid, int usersid,bool? state)
+        {
+            var userJob = await _context.usersJobs.Where(c => c.JobId == jobid && c.UsersId == usersid).FirstOrDefaultAsync();
+            if(userJob==null)
+            {
+                return RedirectToAction("NotFound","Home");
+            }
+            userJob.State=state;
+            await _context.SaveChangesAsync();
+            return RedirectToAction("ViewApplyJob","User",new{jobid=jobid,usersid=usersid});
+        }
+        
         
 
     }

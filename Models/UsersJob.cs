@@ -10,6 +10,7 @@ namespace JobSeed.Models
         public int UsersId{set;get;}
         public string SocialLinkAccount{set;get;}=string.Empty;
         public string Coverletter{set;get;}=string.Empty;
+        public bool? State {set;get;}
         public DateTime ApplyDate{set;get;}=DateTime.Now;
         [NotMapped]
         public IFormFile? FormFile{set;get;}
