@@ -336,6 +336,11 @@ public class UserController : Controller
         {
             return RedirectToAction("NotFound", "Home");
         }
+        int usersIdCurrent = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+        if(id!=usersIdCurrent)
+        {
+            return RedirectToAction("NotFound","Home");
+        } 
         return View(kq);
     }
     [HttpPost]
@@ -371,7 +376,7 @@ public class UserController : Controller
         {
             return View(kq);
         }
-        _context.Entry(kq).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+        _context.Entry(kq).State = EntityState.Modified;
         kq.Password = _hashPasswordByBC.HashPassword(newpassword);
         _context.SaveChanges();
         return RedirectToAction("EditUser", new { UsersId = id });
@@ -400,7 +405,12 @@ public class UserController : Controller
         {
             return RedirectToAction("NotFound", "Home");
         }
-
+        //Validation
+        int usersIdCurrent = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+        if(usersId!=usersIdCurrent)
+        {
+            return RedirectToAction("NotFound","Home");
+        }
         return View(user);
     }
     [Authorize]

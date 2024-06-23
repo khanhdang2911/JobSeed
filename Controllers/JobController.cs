@@ -18,7 +18,7 @@ namespace JobSeed.Controllers
             _context = context;
             _logger = logger;
         }
-
+        [Authorize(Roles ="Admin")]
         public IActionResult Index()
         {
             var allJob = (from p in _context.jobs where p.State==true select p).Include(p => p.JobType).ToList();
@@ -58,7 +58,7 @@ namespace JobSeed.Controllers
             }
             await _context.jobs.AddAsync(job);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Home");
         }
 
         [HttpGet]
@@ -180,7 +180,7 @@ namespace JobSeed.Controllers
         public IActionResult AllJobFilter(int page = 1)
         {
             int jobPerpages = 4;
-            int totalJobs = _context.jobs.ToList().Count;
+            int totalJobs = _context.jobs.Where(c=>c.State==true).ToList().Count;
             int totalPage=(int)Math.Ceiling((double)totalJobs/jobPerpages); 
 
             var jobFilter = _context.jobs.Where(c=>c.State==true).Include(c => c.JobType).AsQueryable();

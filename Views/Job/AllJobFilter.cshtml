@@ -4,7 +4,7 @@
     var allLocations = _context.jobs.Select(c => c.Location).Distinct().ToList();
 
     
-    int totalJobs = _context.jobs.ToList().Count;
+    int totalJobs = _context.jobs.Where(c=>c.State==true).ToList().Count;
     int totalPage = ViewBag.totalPage;
     int currentPage=ViewBag.currentPage;
 }

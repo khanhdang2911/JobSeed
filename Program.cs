@@ -19,7 +19,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath="/User/Login";
         // options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
         // options.SlidingExpiration = true; 
-        options.AccessDeniedPath = "/Login/Forbidden/";
+        options.AccessDeniedPath = "/Home/NotFound/";
     });
 // 
 builder.Services.AddSingleton<HashPasswordByBC>();

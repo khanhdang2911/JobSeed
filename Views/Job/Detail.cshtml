@@ -60,6 +60,11 @@
                             <p>@Html.Raw(Model.Benefits)</p>
                         </div>
                     </div>
+                   @if(user.Id==Model.EmployerId||_context.usersJobs.Any(c=>c.UsersId==user.Id&&c.JobId==Model.Id)==true)
+                   {
+                     
+                   }
+                   else{
                     <div class="apply_job_form white-bg">
                         <h4>Apply for the job</h4>
                         <form asp-action="ApplyJob" method="post" enctype="multipart/form-data">
@@ -72,6 +77,11 @@
                                 <div class="col-md-6">
                                     <div class="input_field">
                                         <input disabled value="@user.Email" type="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input_field">
+                                        <input disabled value="@user.Phone" type="phone" placeholder="Phone">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -108,6 +118,7 @@
                             </div>
                         </form>
                     </div>
+                   }
                 </div>
                 <div class="col-lg-4">
                     <div class="job_sumary">

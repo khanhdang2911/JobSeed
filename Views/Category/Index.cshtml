@@ -1,0 +1,116 @@
+@model List<Category>
+@{
+    Layout="_LayoutAdmin";
+}
+<style>
+     .category-manage-detail{
+        margin-top: 40px;
+        @* width: 60%; *@
+    }
+    .action{
+        padding: 5px;
+    }
+    .delete-btn{
+        cursor: pointer;
+    }
+    .btn-custom{
+        padding: 5px;
+        border-radius: 8px;
+        color:rgb(252, 252, 252);
+    }
+    .btn-custom:hover{
+        color:rgb(252, 252, 252);
+    }
+    .btn-add{
+        background-color: #3eb93c;
+    }
+    /* Style for modal */
+    .modal {
+        width: 350px;
+        height: 150px;
+        display: none; /* Ẩn modal mặc định */
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    /* Style for overlay */
+    .overlay {
+        display: none; /* Ẩn overlay mặc định */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối */
+    }
+</style>
+
+<div class="container col-md-10 category-manage-detail">
+    <a asp-action="Create" class="btn-custom btn-add"><i class="fa-solid fa-plus"></i> Create new category</a>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="">
+            <table class="table table-bordered table-hover table-responsive">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Course name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CategoryName</td>
+                            <td>
+                                
+                                <a class="action delete-btn" data-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="action"><i class="fa-solid fa-wrench"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="overlay" id="overlay"></div> <!-- Overlay để tối màn hình -->
+
+<div id="confirmDeleteModal" class="modal">
+    <span style="cursor: pointer;" class="close">&times;</span>
+    <p>Are you sure you want to delete??</p>
+    <button id="confirmDeleteBtn" class="btn btn-danger" style="border-radius: 8px;">Delete</button>
+</div>
+
+@section Scripts {
+    <script>
+        // Lấy tất cả các nút xóa và gán sự kiện click cho mỗi nút
+        var deleteButtons = document.querySelectorAll('.delete-btn');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                var CategoryId = this.getAttribute('data-id');
+                document.getElementById('confirmDeleteModal').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block'; // Hiển thị overlay
+                
+                // Xác nhận xóa khi người dùng nhấn nút "Xóa"
+                document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+                    window.location.href = '/Category/Delete/' + CategoryId;
+                });
+                
+                // Ẩn modal và overlay khi người dùng nhấn nút "Đóng"
+                document.querySelector('.close').addEventListener('click', function() {
+                    document.getElementById('confirmDeleteModal').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none'; // Ẩn overlay
+                });
+            });
+        });
+    </script>
+}

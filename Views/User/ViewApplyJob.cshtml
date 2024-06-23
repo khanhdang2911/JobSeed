@@ -242,7 +242,7 @@
                                 <td>
                                     <button class="btn btn-warning"
                                         onclick="viewDetails(@item.JobId,@item.UsersId)">View</button>
-                                    <button disabled class="btn btn-success">Accepted</button>
+                                    <button disabled class="btn btn-success">Accepted <i class="fa-solid fa-check"></i></button>
                                 </td>
                             }
                             else
@@ -250,7 +250,7 @@
                                 <td>
                                     <button class="btn btn-warning"
                                         onclick="viewDetails(@item.JobId,@item.UsersId)">View</button>
-                                    <button disabled class="btn btn-danger">Rejected</button>
+                                    <button disabled class="btn btn-danger">Rejected <i class="fa-solid fa-xmark"></i></button>
                                 </td>
                             }
                         </tr>
@@ -266,6 +266,7 @@
                     <h2>Applicant Details</h2>
                     <p><strong>Name:</strong> @item.Users.Name</p>
                     <p><strong>Email:</strong> @item.Users.Email</p>
+                    <p><strong>Social link account:</strong> @item.SocialLinkAccount</p>
                     <p><strong>Phone:</strong> @item.Users.Phone</p>
                     <p><strong>Cover Letter:</strong></p>
                     <p>@Html.Raw(item.Coverletter)</p>

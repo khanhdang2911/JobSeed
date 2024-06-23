@@ -391,6 +391,7 @@
                                     <p>Discover your dream job among countless listings and take the first step towards your bright future.</p>
                                 </div>
                                 <form asp-action="Login" method="post" class="sl-form" onsubmit="return validateForm(event)">
+                                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                                     <div class="form-group">
                                         <label>Email</label>
                                         <input name="Email" type="email" placeholder="Enter email" required

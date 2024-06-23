@@ -4,7 +4,7 @@
 @model List<RoleCheckbox>
 @if(user!=null)
 {
-    <div id="form-submit-role" class="border border-primary" style="margin: 0 auto;width: 50%;">
+    <div id="form-submit-role" class="border border-primary" style="margin: 150px auto;width: 50%;">
         <form method="post" class="m-5" asp-action="AddRoleForUser" asp-route-id="@user.Id" style="margin: 0 auto;">
             <h4>Assign permissions to user @user.Name</h4>
             @* <span class="error error-submit-role">You have not selected a role for the user !</span> *@
