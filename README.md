@@ -1,17 +1,17 @@
 # JobSeed Web Application
----
+
 ## Product Description
 
 In today's fast-paced digital era, finding and securing employment has been revolutionized by online platforms. Our Job Portal web application is designed to streamline the job search and recruitment processes, making them more efficient, transparent, and user-friendly. Whether you are a job seeker looking for your next opportunity or a recruiter searching for the perfect candidate, our platform offers a comprehensive set of features tailored to meet your needs.
 
----
+
 ## Why Choose Our Website?
 
 - **Convenience**: Access job listings and recruitment tools from anywhere, at any time, using any device.
 - **Efficiency**: Quickly filter and search through thousands of job postings to find positions that match your skills and interests.
 - **Transparency**: Track the status of your job applications and recruitment processes in real-time.
 
----
+
 ## Key Features
 
 - **Job Search**: Our advanced search functionality allows users to filter job listings based on categories, locations, job types, and other criteria. This helps job seekers find relevant positions quickly and easily.
@@ -27,7 +27,7 @@ In today's fast-paced digital era, finding and securing employment has been revo
   - **Job Management**: Admins can activate, block, or delete job listings to maintain a safe and trustworthy platform.
   - **Category Management**: Admins can add, edit, or delete job categories to ensure that the job listings are well-organized and relevant.
 
----
+
 ## Running the Application
 
 ### Prerequisites
@@ -61,12 +61,12 @@ Update the connection string in <sub>appsettings.json</sub> to point to your dat
 
 To access the admin panel, log in with an admin account. Admin functionalities are accessible via the admin dashboard.
 
----
+
 ## Video Introduction and Feature Demonstration
 
 For a detailed introduction and demonstration of the application's features, please watch the following video:
 
----
+
 ## Contact
 
 For further information or any queries, please contact us at:  
@@ -75,7 +75,7 @@ For further information or any queries, please contact us at:
 
 +Facebook: facebook.com/WhiteDXK  
 
----
+
 ## Contributing
 
 We welcome contributions to enhance our Job Portal web application! Whether you have a suggestion for a new feature, an improvement to existing functionality, or a bug fix, your input is valuable. Here’s how you can contribute:
