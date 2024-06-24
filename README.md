@@ -40,9 +40,10 @@ In today's fast-paced digital era, finding and securing employment has been revo
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/khanhdang2911/JobSeed.git```
+   git clone https://github.com/khanhdang2911/JobSeed.git
+   ```
 
-2.Set up the database:  
+2. Set up the database:  
 Update the connection string in <sub>appsettings.json</sub> to point to your database server.  
 		   ```
      		   "ConnectionStrings": {
@@ -52,9 +53,12 @@ Update the connection string in <sub>appsettings.json</sub> to point to your dat
 > [!NOTE]
 > For security reasons, if you need the database file to import and use, please contact me via email or Facebook (contact details provided below). I cannot send it directly here.
 
-3.Open Visual Studio Code (Or Visual Studio but I recommend Visual Studio Code)  
-- Run the application: dotnet watch run  
-4.Access the application:  
+3. Open Visual Studio Code (Or Visual Studio but I recommend Visual Studio Code)  
+- **Run the application:**  
+  ```bash
+   dotnet watch run
+  ```  
+4. Access the application:  
 - Open a web browser and navigate to http://localhost:xxxx to access the JobSeed website.
 
 ## Admin Access
@@ -71,9 +75,9 @@ For a detailed introduction and demonstration of the application's features, ple
 
 For further information or any queries, please contact us at:  
 
-+Email: khanhdang3152@gmail.com  
++ **Email:** khanhdang3152@gmail.com  
 
-+Facebook: facebook.com/WhiteDXK  
++ **Facebook:** facebook.com/WhiteDXK  
 
 
 ## Contributing
