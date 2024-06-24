@@ -39,9 +39,10 @@
     <link rel="stylesheet" href="~/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     @* Add tiny *@
-    <script src="https://cdn.tiny.cloud/1/pvevi5e0hjaun4w4calzq12nn00r46e03b2jbdztxcvfxyxl/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-    @* Add fontawesome *@
+@*     <script src="https://cdn.tiny.cloud/1/pvevi5e0hjaun4w4calzq12nn00r46e03b2jbdztxcvfxyxl/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+ *@    @* Add fontawesome *@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -249,15 +250,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <!--contact js-->
-    <script src="~/js/contact.js"></script>
+    @* <script src="~/js/contact.js"></script> *@
     <script src="~/js/jquery.ajaxchimp.min.js"></script>
     <script src="~/js/jquery.form.js"></script>
     <script src="~/js/jquery.validate.min.js"></script>
-    <script src="~/js/mail-script.js"></script>
+    @* <script src="~/js/mail-script.js"></script> *@
 
 
     <script src="~/js/main.js"></script>
-    <script>
+    @* <script>
     tinymce.init({
         selector: 'textarea',
         plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
@@ -270,8 +271,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         ],
         ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
     });
+    </script> *@
+    <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+    <script>
+            CKEDITOR.replace( 'Qualifications' );
+            CKEDITOR.replace( 'Benefits' );
+            CKEDITOR.replace( 'Responsibility' );
+            CKEDITOR.replace( 'Experiences' );
+            CKEDITOR.replace( 'JobDescription' );
     </script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

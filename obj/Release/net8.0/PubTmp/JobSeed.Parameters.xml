@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="khanhdang2911-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\JobSeed\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="JobSeed.Models.AppDbContext" description="" value="Data Source=SQL8006.site4now.net;Initial Catalog=db_aaa3da_login;User Id=db_aaa3da_login_admin;Password=khanh6ad6" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\JobSeed\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\JobSeed\.Models\.AppDbContext\.sql$" />
+  </parameter>
+</parameters>

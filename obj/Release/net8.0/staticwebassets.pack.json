@@ -1,0 +1,849 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\css\\animate.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\css\\flaticon.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\gijgo.css",
+      "PackagePath": "staticwebassets\\css\\gijgo.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\layout_admin.css",
+      "PackagePath": "staticwebassets\\css\\layout_admin.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\nice-select.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\slicknav.css",
+      "PackagePath": "staticwebassets\\css\\slicknav.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\theme-default.css",
+      "PackagePath": "staticwebassets\\css\\theme-default.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\css\\themify-icons.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\fonts\\_flaticon.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\flaticon.css",
+      "PackagePath": "staticwebassets\\fonts\\flaticon.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.eot",
+      "PackagePath": "staticwebassets\\fonts\\gijgo-material.eot"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.svg",
+      "PackagePath": "staticwebassets\\fonts\\gijgo-material.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.ttf",
+      "PackagePath": "staticwebassets\\fonts\\gijgo-material.ttf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.woff",
+      "PackagePath": "staticwebassets\\fonts\\gijgo-material.woff"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\fonts\\themify.eot"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\fonts\\themify.woff"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon.ico"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\footer_logo.png",
+      "PackagePath": "staticwebassets\\img\\footer_logo.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\logo1.png",
+      "PackagePath": "staticwebassets\\img\\logo1.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\1.svg",
+      "PackagePath": "staticwebassets\\img\\svg_icon\\1.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\2.svg",
+      "PackagePath": "staticwebassets\\img\\svg_icon\\2.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\3.svg",
+      "PackagePath": "staticwebassets\\img\\svg_icon\\3.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\4.svg",
+      "PackagePath": "staticwebassets\\img\\svg_icon\\4.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\5.svg",
+      "PackagePath": "staticwebassets\\img\\svg_icon\\5.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\6.svg",
+      "PackagePath": "staticwebassets\\img\\svg_icon\\6.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\ajax-form.js",
+      "PackagePath": "staticwebassets\\js\\ajax-form.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\gijgo.min.js",
+      "PackagePath": "staticwebassets\\js\\gijgo.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\imagesloaded.pkgd.min.js",
+      "PackagePath": "staticwebassets\\js\\imagesloaded.pkgd.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\js\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery.form.js",
+      "PackagePath": "staticwebassets\\js\\jquery.form.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery.scrollUp.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.scrollUp.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery.slicknav.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slicknav.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\nice-select.min.js",
+      "PackagePath": "staticwebassets\\js\\nice-select.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\js\\plugins.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\range.js",
+      "PackagePath": "staticwebassets\\js\\range.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\scrollIt.js",
+      "PackagePath": "staticwebassets\\js\\scrollIt.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\modernizr-3.5.0.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\modernizr-3.5.0.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_accordion_area.scss",
+      "PackagePath": "staticwebassets\\scss\\_accordion_area.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_bradcam.scss",
+      "PackagePath": "staticwebassets\\scss\\_bradcam.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_btn.scss",
+      "PackagePath": "staticwebassets\\scss\\_btn.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_category.scss",
+      "PackagePath": "staticwebassets\\scss\\_category.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_compani.scss",
+      "PackagePath": "staticwebassets\\scss\\_compani.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_elements.scss",
+      "PackagePath": "staticwebassets\\scss\\_elements.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_extend.scss",
+      "PackagePath": "staticwebassets\\scss\\_extend.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\scss\\_footer.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_header.scss",
+      "PackagePath": "staticwebassets\\scss\\_header.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_job.scss",
+      "PackagePath": "staticwebassets\\scss\\_job.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_job_details.scss",
+      "PackagePath": "staticwebassets\\scss\\_job_details.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_job_list.scss",
+      "PackagePath": "staticwebassets\\scss\\_job_list.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_popular_catagory.scss",
+      "PackagePath": "staticwebassets\\scss\\_popular_catagory.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_range.scss",
+      "PackagePath": "staticwebassets\\scss\\_range.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_responsive.scss",
+      "PackagePath": "staticwebassets\\scss\\_responsive.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_section_title.scss",
+      "PackagePath": "staticwebassets\\scss\\_section_title.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_service.scss",
+      "PackagePath": "staticwebassets\\scss\\_service.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_slick-nav.scss",
+      "PackagePath": "staticwebassets\\scss\\_slick-nav.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_slider.scss",
+      "PackagePath": "staticwebassets\\scss\\_slider.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_testmonial.scss",
+      "PackagePath": "staticwebassets\\scss\\_testmonial.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\_varriable.scss",
+      "PackagePath": "staticwebassets\\scss\\_varriable.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\scss\\style.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\scss\\theme-default.scss",
+      "PackagePath": "staticwebassets\\scss\\theme-default.scss"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\0d70200090b21d6e0d3fde7eb894b303.webp",
+      "PackagePath": "staticwebassets\\uploads\\0d70200090b21d6e0d3fde7eb894b303.webp"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\1081aec73d037579fcfaf0f8a1232431.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1081aec73d037579fcfaf0f8a1232431.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\4a14e7b2de7f6eaf5a6c98cb8c00b8de.webp",
+      "PackagePath": "staticwebassets\\uploads\\4a14e7b2de7f6eaf5a6c98cb8c00b8de.webp"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\525858954db2db7a24eb0d1070d316de.webp",
+      "PackagePath": "staticwebassets\\uploads\\525858954db2db7a24eb0d1070d316de.webp"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\653984410b92ab534c451293e184637c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\653984410b92ab534c451293e184637c.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\6c6723443d9999b15485b7c6585421ce.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6c6723443d9999b15485b7c6585421ce.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\7fae8166246aafaacc1b12074d2540bb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7fae8166246aafaacc1b12074d2540bb.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\86609854975c26a727f1e4d11c3fc7a2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\86609854975c26a727f1e4d11c3fc7a2.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\8873b69d82b87dc1d13686795e8f9f58.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8873b69d82b87dc1d13686795e8f9f58.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\9c494b6b520baa384c5079ef194f660a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9c494b6b520baa384c5079ef194f660a.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Airtable.svg",
+      "PackagePath": "staticwebassets\\uploads\\Airtable.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\GitLab.svg",
+      "PackagePath": "staticwebassets\\uploads\\GitLab.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Instacart.svg",
+      "PackagePath": "staticwebassets\\uploads\\Instacart.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Loom.svg",
+      "PackagePath": "staticwebassets\\uploads\\Loom.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Mailchimp.svg",
+      "PackagePath": "staticwebassets\\uploads\\Mailchimp.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Metamask.svg",
+      "PackagePath": "staticwebassets\\uploads\\Metamask.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Nghia_TTS.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Nghia_TTS.pdf"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Notion.svg",
+      "PackagePath": "staticwebassets\\uploads\\Notion.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\PayPal.svg",
+      "PackagePath": "staticwebassets\\uploads\\PayPal.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Ramp.svg",
+      "PackagePath": "staticwebassets\\uploads\\Ramp.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\SHUTTERSTOCK_1975482467.jpg",
+      "PackagePath": "staticwebassets\\uploads\\SHUTTERSTOCK_1975482467.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Shopify.svg",
+      "PackagePath": "staticwebassets\\uploads\\Shopify.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Slack.svg",
+      "PackagePath": "staticwebassets\\uploads\\Slack.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\Twilio.svg",
+      "PackagePath": "staticwebassets\\uploads\\Twilio.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\UserTesting.svg",
+      "PackagePath": "staticwebassets\\uploads\\UserTesting.svg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\avatar1.png",
+      "PackagePath": "staticwebassets\\uploads\\avatar1.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\b709485823dae6c39d25eb5fa2f8a3f0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b709485823dae6c39d25eb5fa2f8a3f0.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\b9914c0f1fa47a4cc405672cfd84cfac.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b9914c0f1fa47a4cc405672cfd84cfac.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\c3889200935840001dabdbeb32517215.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c3889200935840001dabdbeb32517215.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\choCute.jpg",
+      "PackagePath": "staticwebassets\\uploads\\choCute.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\company_logo_10.png",
+      "PackagePath": "staticwebassets\\uploads\\company_logo_10.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\download.jpg",
+      "PackagePath": "staticwebassets\\uploads\\download.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\fd53d3428b159f5d557f1afadf6aa0a4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fd53d3428b159f5d557f1afadf6aa0a4.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo.png",
+      "PackagePath": "staticwebassets\\uploads\\logo.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo3.png",
+      "PackagePath": "staticwebassets\\uploads\\logo3.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo4.png",
+      "PackagePath": "staticwebassets\\uploads\\logo4.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\maruko.jpg",
+      "PackagePath": "staticwebassets\\uploads\\maruko.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\shincute.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shincute.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.JobSeed.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.JobSeed.props",
+      "PackagePath": "build\\JobSeed.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.JobSeed.props",
+      "PackagePath": "buildMultiTargeting\\JobSeed.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.JobSeed.props",
+      "PackagePath": "buildTransitive\\JobSeed.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
