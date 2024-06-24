@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
-/* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_extend.scss */
 .flex-center-start {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,25 +12,12 @@
   justify-content: start;
 }
 
-/* Normal desktop :1200px. */
-/* Normal desktop :992px. */
-/* Tablet desktop :768px. */
-/* small mobile :320px. */
-/* Large Mobile :480px. */
-/* 1. Theme default css */
-/* Normal desktop :1200px. */
-/* Normal desktop :992px. */
-/* Tablet desktop :768px. */
-/* small mobile :320px. */
-/* Large Mobile :480px. */
-/* line 6, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 body {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 13, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .img {
   max-width: 100%;
   -webkit-transition: 0.3s;
@@ -40,7 +26,6 @@ body {
   transition: 0.3s;
 }
 
-/* line 17, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 a,
 .button {
   -webkit-transition: 0.3s;
@@ -49,19 +34,16 @@ a,
   transition: 0.3s;
 }
 
-/* line 21, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 a:focus,
 .button:focus, button:focus {
   text-decoration: none;
   outline: none;
 }
 
-/* line 26, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 a:focus {
   text-decoration: none;
 }
 
-/* line 29, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
@@ -69,20 +51,17 @@ a:hover,
   text-decoration: none;
 }
 
-/* line 35, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 a,
 button {
   color: #1F1F1F;
   outline: medium none;
 }
 
-/* line 40, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Roboto", sans-serif;
   color: #191d34;
 }
 
-/* line 44, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 h1 a,
 h2 a,
 h3 a,
@@ -92,18 +71,15 @@ h6 a {
   color: inherit;
 }
 
-/* line 53, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 ul {
   margin: 0px;
   padding: 0px;
 }
 
-/* line 57, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 li {
   list-style: none;
 }
 
-/* line 60, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 p {
   font-size: 16px;
   font-weight: 400;
@@ -113,7 +89,6 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
-/* line 69, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 label {
   color: #7e7e7e;
   cursor: pointer;
@@ -121,102 +96,73 @@ label {
   font-weight: 400;
 }
 
-/* line 75, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 *::-moz-selection {
   background: #444;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 80, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 ::-moz-selection {
   background: #444;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 85, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 ::selection {
   background: #444;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 90, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 *::-webkit-input-placeholder {
   color: #cccccc;
   font-size: 14px;
   opacity: 1;
 }
 
-/* line 95, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 *:-ms-input-placeholder {
   color: #cccccc;
   font-size: 14px;
   opacity: 1;
 }
 
-/* line 100, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 *::-ms-input-placeholder {
   color: #cccccc;
   font-size: 14px;
   opacity: 1;
 }
 
-/* line 105, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 *::placeholder {
   color: #cccccc;
   font-size: 14px;
   opacity: 1;
 }
 
-/* line 111, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 115, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .mb-65 {
   margin-bottom: 67px;
 }
 
-/* line 119, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .black-bg {
   background: #020c26 !important;
 }
 
-/* line 123, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .white-bg {
   background: #ffffff;
 }
 
-/* line 126, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .gray-bg {
   background: #f5f5f5;
 }
 
-/* line 131, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
-.bg-img-1 {
-  background-image: url(../img/slider/slider-img-1.jpg);
-}
-
-/* line 134, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
-.bg-img-2 {
-  background-image: url(../img/background-img/bg-img-2.jpg);
-}
-
-/* line 137, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
-.cta-bg-1 {
-  background-image: url(../img/background-img/bg-img-3.jpg);
-}
-
-/* line 142, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .overlay {
   position: relative;
   z-index: 0;
 }
 
-/* line 146, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .overlay::before {
   position: absolute;
   content: "";
@@ -229,13 +175,11 @@ h3 {
   opacity: .5;
 }
 
-/* line 158, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .overlay2 {
   position: relative;
   z-index: 0;
 }
 
-/* line 162, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .overlay2::before {
   position: absolute;
   content: "";
@@ -248,13 +192,11 @@ h3 {
   opacity: 0.6;
 }
 
-/* line 174, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .overlay_03 {
   position: relative;
   z-index: 0;
 }
 
-/* line 178, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 .overlay_03::before {
   position: absolute;
   width: 100%;

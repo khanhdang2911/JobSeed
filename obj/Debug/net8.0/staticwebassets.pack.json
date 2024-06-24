@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\css\\flaticon.css"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\css\\font-awesome.min.css",
-      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\css\\gijgo.css",
       "PackagePath": "staticwebassets\\css\\gijgo.css"
     },
@@ -43,10 +39,6 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\css\\slicknav.css",
-      "PackagePath": "staticwebassets\\css\\slicknav.css"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\css\\style.css",
@@ -313,44 +305,12 @@
       "PackagePath": "staticwebassets\\js\\nice-select.min.js"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\owl.carousel.min.js",
-      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\plugins.js",
-      "PackagePath": "staticwebassets\\js\\plugins.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\popper.min.js",
-      "PackagePath": "staticwebassets\\js\\popper.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\range.js",
-      "PackagePath": "staticwebassets\\js\\range.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\scrollIt.js",
-      "PackagePath": "staticwebassets\\js\\scrollIt.js"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\jquery-1.12.4.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\jquery-1.12.4.min.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\modernizr-3.5.0.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\modernizr-3.5.0.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\waypoints.min.js",
-      "PackagePath": "staticwebassets\\js\\waypoints.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\wow.min.js",
-      "PackagePath": "staticwebassets\\js\\wow.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
@@ -529,20 +489,12 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
@@ -583,10 +535,6 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_accordion_area.scss",
       "PackagePath": "staticwebassets\\scss\\_accordion_area.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_bradcam.scss",
-      "PackagePath": "staticwebassets\\scss\\_bradcam.scss"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_btn.scss",
@@ -637,32 +585,12 @@
       "PackagePath": "staticwebassets\\scss\\_popular_catagory.scss"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_range.scss",
-      "PackagePath": "staticwebassets\\scss\\_range.scss"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_responsive.scss",
       "PackagePath": "staticwebassets\\scss\\_responsive.scss"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_section_title.scss",
       "PackagePath": "staticwebassets\\scss\\_section_title.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_service.scss",
-      "PackagePath": "staticwebassets\\scss\\_service.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_slick-nav.scss",
-      "PackagePath": "staticwebassets\\scss\\_slick-nav.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_slider.scss",
-      "PackagePath": "staticwebassets\\scss\\_slider.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\scss\\_testmonial.scss",
-      "PackagePath": "staticwebassets\\scss\\_testmonial.scss"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\scss\\_varriable.scss",
