@@ -7,60 +7,74 @@ In today's fast-paced digital era, finding and securing employment has been revo
 ---
 ## Why Choose Our Website?
 
-● **Convenience**: Access job listings and recruitment tools from anywhere, at any time, using any device.  
-● **Efficiency**: Quickly filter and search through thousands of job postings to find positions that match your skills and interests.  
-● **Transparency**: Track the status of your job applications and recruitment processes in real-time.
+- **Convenience**: Access job listings and recruitment tools from anywhere, at any time, using any device.
+- **Efficiency**: Quickly filter and search through thousands of job postings to find positions that match your skills and interests.
+- **Transparency**: Track the status of your job applications and recruitment processes in real-time.
 
 ---
 ## Key Features
 
-● **Job Search**: Our advanced search functionality allows users to filter job listings based on categories, locations, job types, and other criteria. This helps job seekers find relevant  positions quickly and easily.
+- **Job Search**: Our advanced search functionality allows users to filter job listings based on categories, locations, job types, and other criteria. This helps job seekers find relevant positions quickly and easily.
 
-● **Job Posting**: Recruiters can upload job listings with detailed descriptions, requirements, and company information. All job postings are subject to admin approval to ensure quality and safety.
+- **Job Posting**: Recruiters can upload job listings with detailed descriptions, requirements, and company information. All job postings are subject to admin approval to ensure quality and safety.
 
-● **Application Management:**
-    + **For Job Seekers:** Apply for jobs directly through the portal, upload your resume, and track the status of your applications (pending, accepted, rejected).
-    + **For Recruiters:** View job applications, accept or reject candidates, and review detailed profiles and resumes.
+- **Application Management**:
+  - **For Job Seekers**: Apply for jobs directly through the portal, upload your resume, and track the status of your applications (pending, accepted, rejected).
+  - **For Recruiters**: View job applications, accept or reject candidates, and review detailed profiles and resumes.
 
-● **Admin Panel:**
-    + **User Management:** Admins have full control over user accounts, including the ability to assign roles, suspend or delete accounts that violate policies, and manage user permissions.
+- **Admin Panel**:
+  - **User Management**: Admins have full control over user accounts, including the ability to assign roles, suspend, or delete accounts that violate policies, and manage user permissions.
+  - **Job Management**: Admins can activate, block, or delete job listings to maintain a safe and trustworthy platform.
+  - **Category Management**: Admins can add, edit, or delete job categories to ensure that the job listings are well-organized and relevant.
 
-    + **Job Management:** Admins can activate, block, or delete job listings to maintain a safe and trustworthy platform.
-    + **Category Management:** Admins can add, edit, or delete job categories to ensure that the job listings are well-organized and relevant.
 ---
 ## Running the Application
-# Prerequisites
-		+ .NET Core SDK
-		+ Entity Framework Core
-		+ A database server (SQL Server)
-# Steps
-		1.Clone the repository:
-	           ```git clone https://github.com/khanhdang2911/JobSeed.git```
-	    	2.Set up the database
-      	           Update the connection string in <sub>appsettings.json</sub> to point to your database server.
+
+### Prerequisites
+
+- .NET Core SDK
+- Entity Framework Core
+- A database server (SQL Server)
+
+### Steps
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/khanhdang2911/JobSeed.git```
+
+2.Set up the database:  
+Update the connection string in <sub>appsettings.json</sub> to point to your database server.  
 		   ```
      		   "ConnectionStrings": {
 		   "MyContext": "YOUR CONNECTION STRING DATABASE"
 		   }
      		   ```
-	  	> [!NOTE]
-		> For security reasons, if you need the database file to import and use, please contact me via email or Facebook (contact details provided below). I cannot send it directly here.
+> [!NOTE]
+> For security reasons, if you need the database file to import and use, please contact me via email or Facebook (contact details provided below). I cannot send it directly here.
 
-     		3.Open Visual Studio Code (Or Visual Studio but I recommend Visual Studio Code)
-		Run the application: dotnet watch run
-  		4.Access the application:
-		Open a web browser and navigate to http://localhost:xxxx to access the JobSeed website.
+3.Open Visual Studio Code (Or Visual Studio but I recommend Visual Studio Code)  
+- Run the application: dotnet watch run  
+4.Access the application:  
+- Open a web browser and navigate to http://localhost:xxxx to access the JobSeed website.
 
-# Admin Access
-    To access the admin panel, log in with an admin account. Admin functionalities are accessible via the admin dashboard.
+## Admin Access
+
+To access the admin panel, log in with an admin account. Admin functionalities are accessible via the admin dashboard.
+
 ---
 ## Video Introduction and Feature Demonstration
+
 For a detailed introduction and demonstration of the application's features, please watch the following video:
+
 ---
 ## Contact
-For further information or any queries, please contact us at:
-+Email: khanhdang3152@gmail.com
-+Facebook: facebook.com/WhiteDXK
+
+For further information or any queries, please contact us at:  
+
++Email: khanhdang3152@gmail.com  
+
++Facebook: facebook.com/WhiteDXK  
+
 ---
 ## Contributing
 
