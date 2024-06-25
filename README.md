@@ -1,5 +1,11 @@
 # 👋 JobSeed Web Application
+## Website
 
+You can access the website at: [Website URL](http://khanhdang2911-001-site1.ctempurl.com)
+> **Note:** When accessing the website, please enter the username and password below. This is required because the site is currently deployed on a free cloud service. Thank you for your understanding.
+
+- **Username:** 11183066
+- **Password:** 60-dayfreetrial
 ## Product Description
 
 In today's fast-paced digital era, finding and securing employment has been revolutionized by online platforms. Our Job Portal web application is designed to streamline the job search and recruitment processes, making them more efficient, transparent, and user-friendly. Whether you are a job seeker looking for your next opportunity or a recruiter searching for the perfect candidate, our platform offers a comprehensive set of features tailored to meet your needs.
