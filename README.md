@@ -26,7 +26,24 @@ In today's fast-paced digital era, finding and securing employment has been revo
   - **User Management**: Admins have full control over user accounts, including the ability to assign roles, suspend, or delete accounts that violate policies, and manage user permissions.
   - **Job Management**: Admins can activate, block, or delete job listings to maintain a safe and trustworthy platform.
   - **Category Management**: Admins can add, edit, or delete job categories to ensure that the job listings are well-organized and relevant.
+## Technologies Used
 
+### Frontend
+
+- **HTML**: Used to build the structure of the web pages.
+- **CSS, SCSS**: CSS is used for styling and layout of the web pages. SCSS (Sass) is used for writing more structured and maintainable CSS.
+- **JavaScript**: Used to create dynamic interactions and handle events on the web pages.
+- **Bootstrap**: A popular CSS framework that helps create responsive and easy-to-use designs.
+- **jQuery**: A JavaScript library that simplifies DOM manipulation and AJAX operations.
+
+### Backend
+
+- **ASP.NET Core MVC (C#)**: A powerful framework from Microsoft for building web applications based on the MVC (Model-View-Controller) pattern, ensuring clear organization and maintainability of the code.
+- **Entity Framework**: Microsoft’s ORM (Object-Relational Mapping) that facilitates easy and efficient database interactions, minimizing manual SQL code and ensuring data consistency.
+
+### Database
+
+- **SQL Server**: A robust and scalable relational database management system from Microsoft, used to manage and store the application's data securely.
 
 ## Running the Application
 
