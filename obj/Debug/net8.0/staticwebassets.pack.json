@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\css\\flaticon.css"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\css\\gijgo.css",
-      "PackagePath": "staticwebassets\\css\\gijgo.css"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\css\\jquery-ui.css",
       "PackagePath": "staticwebassets\\css\\jquery-ui.css"
     },
@@ -57,150 +53,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.eot",
-      "PackagePath": "staticwebassets\\fonts\\Flaticon.eot"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.svg",
-      "PackagePath": "staticwebassets\\fonts\\Flaticon.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.ttf",
-      "PackagePath": "staticwebassets\\fonts\\Flaticon.ttf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.woff",
-      "PackagePath": "staticwebassets\\fonts\\Flaticon.woff"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\Flaticon.woff2",
-      "PackagePath": "staticwebassets\\fonts\\Flaticon.woff2"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\FontAwesome.otf",
-      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\_flaticon.scss",
-      "PackagePath": "staticwebassets\\fonts\\_flaticon.scss"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.eot",
-      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.eot"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.svg",
-      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.ttf",
-      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.ttf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.woff",
-      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-brands-400.woff2",
-      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff2"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.eot",
-      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.eot"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.svg",
-      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.ttf",
-      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.ttf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.woff",
-      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-regular-400.woff2",
-      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff2"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.eot",
-      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.eot"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.svg",
-      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.ttf",
-      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.ttf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.woff",
-      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fa-solid-900.woff2",
-      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff2"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\flaticon.css",
-      "PackagePath": "staticwebassets\\fonts\\flaticon.css"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.eot",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.svg",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.ttf",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.woff",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\fontawesome-webfont.woff2",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.eot",
-      "PackagePath": "staticwebassets\\fonts\\gijgo-material.eot"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.svg",
-      "PackagePath": "staticwebassets\\fonts\\gijgo-material.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.ttf",
-      "PackagePath": "staticwebassets\\fonts\\gijgo-material.ttf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\gijgo-material.woff",
-      "PackagePath": "staticwebassets\\fonts\\gijgo-material.woff"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.eot",
-      "PackagePath": "staticwebassets\\fonts\\themify.eot"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.svg",
-      "PackagePath": "staticwebassets\\fonts\\themify.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.ttf",
-      "PackagePath": "staticwebassets\\fonts\\themify.ttf"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\fonts\\themify.woff",
-      "PackagePath": "staticwebassets\\fonts\\themify.woff"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\img\\favicon.ico",
       "PackagePath": "staticwebassets\\img\\favicon.ico"
     },
@@ -221,40 +73,12 @@
       "PackagePath": "staticwebassets\\img\\logo1.png"
     },
     {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\1.svg",
-      "PackagePath": "staticwebassets\\img\\svg_icon\\1.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\2.svg",
-      "PackagePath": "staticwebassets\\img\\svg_icon\\2.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\3.svg",
-      "PackagePath": "staticwebassets\\img\\svg_icon\\3.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\4.svg",
-      "PackagePath": "staticwebassets\\img\\svg_icon\\4.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\5.svg",
-      "PackagePath": "staticwebassets\\img\\svg_icon\\5.svg"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\img\\svg_icon\\6.svg",
-      "PackagePath": "staticwebassets\\img\\svg_icon\\6.svg"
-    },
-    {
       "Id": "D:\\JobSeed\\wwwroot\\js\\ajax-form.js",
       "PackagePath": "staticwebassets\\js\\ajax-form.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
-    },
-    {
-      "Id": "D:\\JobSeed\\wwwroot\\js\\gijgo.min.js",
-      "PackagePath": "staticwebassets\\js\\gijgo.min.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\js\\imagesloaded.pkgd.min.js",
@@ -305,12 +129,40 @@
       "PackagePath": "staticwebassets\\js\\nice-select.min.js"
     },
     {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\js\\plugins.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\range.js",
+      "PackagePath": "staticwebassets\\js\\range.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\scrollIt.js",
+      "PackagePath": "staticwebassets\\js\\scrollIt.js"
+    },
+    {
       "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\jquery-1.12.4.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\jquery-1.12.4.min.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\js\\vendor\\modernizr-3.5.0.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\modernizr-3.5.0.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
@@ -657,6 +509,10 @@
       "PackagePath": "staticwebassets\\uploads\\Instacart.svg"
     },
     {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\LamND_BackendDeveloper.pdf",
+      "PackagePath": "staticwebassets\\uploads\\LamND_BackendDeveloper.pdf"
+    },
+    {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\Loom.svg",
       "PackagePath": "staticwebassets\\uploads\\Loom.svg"
     },
@@ -709,6 +565,18 @@
       "PackagePath": "staticwebassets\\uploads\\avatar1.png"
     },
     {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\avt1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avt1.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\avt2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avt2.jpg"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\avt3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avt3.jpg"
+    },
+    {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\b709485823dae6c39d25eb5fa2f8a3f0.jpg",
       "PackagePath": "staticwebassets\\uploads\\b709485823dae6c39d25eb5fa2f8a3f0.jpg"
     },
@@ -729,6 +597,10 @@
       "PackagePath": "staticwebassets\\uploads\\company_logo_10.png"
     },
     {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\cvdemo1.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvdemo1.pdf"
+    },
+    {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\download.jpg",
       "PackagePath": "staticwebassets\\uploads\\download.jpg"
     },
@@ -747,6 +619,10 @@
     {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\logo4.png",
       "PackagePath": "staticwebassets\\uploads\\logo4.png"
+    },
+    {
+      "Id": "D:\\JobSeed\\wwwroot\\uploads\\logocty1.png",
+      "PackagePath": "staticwebassets\\uploads\\logocty1.png"
     },
     {
       "Id": "D:\\JobSeed\\wwwroot\\uploads\\maruko.jpg",

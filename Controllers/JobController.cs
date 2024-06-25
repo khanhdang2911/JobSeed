@@ -151,10 +151,10 @@ namespace JobSeed.Controllers
             return View(kq);
         }
 
-        [AllowAnonymous]
-        public IActionResult Search(string jobName)
+        [Authorize(Roles="Admin")]
+        public IActionResult SearchJob(string jobName)
         {
-            var kq = _context.jobs.Where(p => p.JobName.Contains(jobName)).ToList();
+            var kq = _context.jobs.Where(p => p.JobName.Contains(jobName)).Include(c=>c.JobType).ToList();
             if (kq == null)
             {
                 return RedirectToAction("NotFound", "Home");

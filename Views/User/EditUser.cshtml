@@ -309,8 +309,8 @@ width: 300px;
         }
 
         .profile-right__content {
-            display: flex;
-            margin-top: 20px;
+            @* display: flex; *@
+            @* margin-top: 20px; *@
         }
 
         .change-avt-box {
@@ -358,8 +358,8 @@ width: 300px;
         }
 
         .personal-infor-box {
-            display: flex;
-            gap: 100px;
+            @* display: flex; *@
+            @* gap: 100px; *@
             padding-top: 0;
             padding-bottom: 0;
             padding-left: 20px;
@@ -373,7 +373,9 @@ width: 300px;
         }
 
         .personal-infor__form {
-            width: 60%;
+            @* width: 60%; *@
+            display: flex;
+
         }
 
         .personal-infor__form div {
@@ -444,39 +446,44 @@ width: 300px;
 
                                     <form asp-action="EditUser" asp-route-usersId="@Model.Id"
                                         class="personal-infor__form" enctype="multipart/form-data">
-                                        <div class="change-avt-box">
-                                            <figure>
-                                                <img src="~/@Model.ImageLink" alt="" class="personal-infor__avt">
-                                            </figure>
-                                            <input asp-for="FormFile" id="imageUpload" type="file"
-                                                class="btn__profile btn__change-avt">
-                                        </div>
-                                        <div class="name">
-                                            <label for="Name"><i class="fa-solid fa-user-tie"></i>Your
-                                                Name</label>
-                                            <input type="text" asp-for="Name" id="Name" placeholder="Enter your name"
-                                                required>
-                                        </div>
-                                        <span class="error-message" id="nameError"></span>
-                                        <div class="email">
-                                            <label for="Email"><i class="fa-solid fa-envelope"></i>Your
-                                                Email</label>
-                                            <input asp-for="Email" type="email" id="Email"
-                                                placeholder="Enter your email" required>
-                                        </div>
-                                        <span class="error-message" id="emailError"></span>
-                                        <div class="phone">
-                                            <label for="Phone"><i class="fa-solid fa-phone"></i>Phone Number
-                                            </label>
-                                            <input asp-for="Phone" type="text" id="Phone"
-                                                placeholder="Enter your number phone" required>
-                                        </div>
-                                        <span class="error-message" id="phoneError"></span>
-                                        @* password *@
-                                        <input type="hidden" asp-for="Password" class="form-control"
-                                            value="@Model.Password">
-                                        <button type="submit" class="btn__profile btn__submit-personal-infor">Update
+                                        <section>
+                                            <div class="change-avt-box">
+                                                <figure>
+                                                    <img src="~/@Model.ImageLink" alt="" class="personal-infor__avt">
+                                                </figure>
+                                                <input asp-for="FormFile" id="imageUpload" type="file"
+                                                    class="btn__profile btn__change-avt">
+                                            </div>
+                                        </section>
+                                        <section style="width: 60%;">
+                                            <div class="name">
+                                                <label for="Name"><i class="fa-solid fa-user-tie"></i>Your
+                                                    Name</label>
+                                                <input type="text" asp-for="Name" id="Name" placeholder="Enter your name"
+                                                    required>
+                                            </div>
+                                            <span class="error-message" id="nameError"></span>
+                                            <div class="email">
+                                                <label for="Email"><i class="fa-solid fa-envelope"></i>Your
+                                                    Email</label>
+                                                <input asp-for="Email" type="email" id="Email"
+                                                    placeholder="Enter your email" required>
+                                            </div>
+                                            <span class="error-message" id="emailError"></span>
+                                            <div class="phone">
+                                                <label for="Phone"><i class="fa-solid fa-phone"></i>Phone Number
+                                                </label>
+                                                <input asp-for="Phone" type="text" id="Phone"
+                                                    placeholder="Enter your number phone" required>
+                                            </div>
+                                            <span class="error-message" id="phoneError"></span>
+                                            @* password *@
+                                            <input type="hidden" asp-for="Password" class="form-control"
+                                                value="@Model.Password">
+                                                <button type="submit" class="btn__profile btn__submit-personal-infor">Update
                                         </button>
+                                        </section>
+                                        
                                     </form>
                                     <script>
                                         let fileAvatar = document.querySelector("#imageUpload");

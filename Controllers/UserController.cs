@@ -259,11 +259,7 @@ public class UserController : Controller
     [Authorize]
     public IActionResult EditUser(int UsersId)
     {
-        if (User.IsInRole("Admin"))
-        {
-
-        }
-        else if (UsersId.ToString() != User.Claims.FirstOrDefault(c => c.Type == "Id")?.Value)
+        if (UsersId.ToString() != User.Claims.FirstOrDefault(c => c.Type == "Id")?.Value)
         {
             return RedirectToAction("NotFound", "Home");
         }
@@ -326,7 +322,7 @@ public class UserController : Controller
             kq.ImageLink = users.ImageLink;
         }
         await _context.SaveChangesAsync();
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("EditUser", new{usersid=UsersId});
     }
     [Authorize]
     public IActionResult ChangePassword(int id)

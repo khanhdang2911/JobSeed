@@ -1,7 +1,11 @@
 @model Job
 @inject AppDbContext _context;
 <div style="margin-top: 100px; margin-bottom: 100px;">
-    <form id="edit-job" method="post" asp-action="Edit" style="width: 60%; margin: 0 auto;" enctype="multipart/form-data">
+    <br>
+    <h1 style="width: 80%; margin: 0 auto;">EDIT JOB</h1>
+    <hr style="width: 80%; margin: 0 auto;">
+    <br>
+    <form id="edit-job" method="post" asp-action="Edit" style="width: 80%; margin: 0 auto;" enctype="multipart/form-data">
         <div class="form-group">
             <label asp-for="JobName" class="control-label">Job Title</label>
             <input type="text" asp-for="JobName" class="form-control" id="jobName">
@@ -120,7 +124,7 @@
         </div>
 
         <hr>
-        <input type="submit" class="btn btn-success" value="Upload Job">
+        <input type="submit" class="btn btn-success" value="Edit Job">
     </form>
 </div>
 

@@ -1,9 +1,13 @@
 @model Job
 @inject AppDbContext _context;
 <div style="margin-top: 100px; margin-bottom: 100px;">
-    <form id="create-job" method="post" asp-action="Create" style="width: 60%; margin: 0 auto;" enctype="multipart/form-data">
+    <br>
+    <h1 style="width: 80%; margin: 0 auto;">POST NEW JOB</h1>
+    <hr style="width: 80%; margin: 0 auto;">
+    <br>
+    <form id="create-job" method="post" asp-action="Create" style="width: 80%; margin: 0 auto;" enctype="multipart/form-data">
         <div class="form-group">
-            <label asp-for="JobName" class="control-label">Job Title</label>
+            <label asp-for="JobName" class="control-label">Job name</label>
             <input type="text" asp-for="JobName" class="form-control" id="jobName">
             <span class="text-danger error"></span>
         </div>
