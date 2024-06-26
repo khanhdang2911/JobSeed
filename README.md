@@ -10,6 +10,9 @@ You can access the website at: [Website URL](http://khanhdang2911-001-site1.ctem
 
 In today's fast-paced digital era, finding and securing employment has been revolutionized by online platforms. Our Job Portal web application is designed to streamline the job search and recruitment processes, making them more efficient, transparent, and user-friendly. Whether you are a job seeker looking for your next opportunity or a recruiter searching for the perfect candidate, our platform offers a comprehensive set of features tailored to meet your needs.
 
+Welcome to our Job Portal, your ultimate destination for all things related to job searching and recruitment. Our mission is to connect job seekers with potential employers in a seamless and effective manner, transforming the way people find jobs and hire talent.
+
+
 
 ## Why Choose Our Website?
 
@@ -110,7 +113,7 @@ To access the admin panel, log in with an admin account. Admin functionalities a
 
 For a detailed introduction and demonstration of the application's features, please watch the following video:
 
-[VideoDemo](https://drive.google.com/file/d/1uBqcRdpuxOGkPl5KI6oNXEQH8eNubHYD/view?usp=drive_link)
+[VideoDemo](https://drive.google.com/file/d/1X4j56LGQ_tC8rgOTRqBv77Oxi7Iy7rIk/view?usp=sharing)
 >⚠️ **Note:** The video demo does not cover all the features of the website and might sometimes be difficult to visualize. Please visit the website and experience it directly (link provided above).
 
 > **Additional Note:** When watching the video, please set the resolution to high (720pHD, 1080pHD) for clear viewing instead of the default setting.
