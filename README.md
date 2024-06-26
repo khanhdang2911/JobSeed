@@ -93,6 +93,10 @@ To access the admin panel, log in with an admin account. Admin functionalities a
 
 For a detailed introduction and demonstration of the application's features, please watch the following video:
 
+[VideoDemo](https://drive.google.com/file/d/1uBqcRdpuxOGkPl5KI6oNXEQH8eNubHYD/view?usp=drive_link)
+>⚠️ **Note:** The video demo does not cover all the features of the website and might sometimes be difficult to visualize. Please visit the website and experience it directly (link provided above).
+
+> **Additional Note:** When watching the video, please set the resolution to high (720pHD, 1080pHD) for clear viewing instead of the default setting.
 
 ## Contact
 
