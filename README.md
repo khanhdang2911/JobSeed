@@ -132,7 +132,7 @@ To help you explore the features of our JobSeed Website, we have provided sample
 - **Admin Account:** Use this account to access the admin dashboard, manage user accounts, job listings, and site categories. You can also view detailed reports and analytics.
 - **Recruiter Account:** Use this account to post job listings, review applications, and manage candidate profiles. Experience the full suite of recruitment tools.
 - **Job Seeker Account:** Use this account to search for jobs, apply to positions, and manage your profile and application history. Explore the job search and application tracking features.
-> ### [!Important Notice]
+> ### ⚠️ Important Notice
 >
 > Please note that providing these test accounts and passwords is necessary for you to fully experience the functionalities of our JobSeed. However, we understand the risks involved in sharing this information publicly. We kindly ask for your cooperation:
 >
