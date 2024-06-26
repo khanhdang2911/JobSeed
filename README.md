@@ -20,18 +20,32 @@ In today's fast-paced digital era, finding and securing employment has been revo
 
 ## 🚍 Key Features
 
-- **Job Search**: Our advanced search functionality allows users to filter job listings based on categories, locations, job types, and other criteria. This helps job seekers find relevant positions quickly and easily.
+- **Job Search**: 
+  - Our advanced search functionality allows users to filter job listings based on categories, locations, job types, and other criteria. This helps job seekers find relevant positions quickly and easily.
 
-- **Job Posting**: Recruiters can upload job listings with detailed descriptions, requirements, and company information. All job postings are subject to admin approval to ensure quality and safety.
+- **Job Posting**:
+  - Recruiters can upload job listings with detailed descriptions, requirements, and company information.
+  - All job postings are subject to admin approval to ensure quality and safety.
+  - Featured job postings to highlight urgent or high-priority positions.
 
 - **Application Management**:
   - **For Job Seekers**: Apply for jobs directly through the portal, upload your resume, and track the status of your applications (pending, accepted, rejected).
   - **For Recruiters**: View job applications, accept or reject candidates, and review detailed profiles and resumes.
 
+- **User Profiles**:
+  - **Job Seekers**: Manage basic information such as name, email, phone number, job upload history, and job application history.
+  - **Recruiters**: View detailed profiles of applicants who have applied to their job listings.
+
 - **Admin Panel**:
   - **User Management**: Admins have full control over user accounts, including the ability to assign roles, suspend, or delete accounts that violate policies, and manage user permissions.
   - **Job Management**: Admins can activate, block, or delete job listings to maintain a safe and trustworthy platform.
   - **Category Management**: Admins can add, edit, or delete job categories to ensure that the job listings are well-organized and relevant.
+
+- **Security**:
+  - Secure authentication and user data protection to ensure privacy and safety.
+  - Regular security updates and maintenance to protect against vulnerabilities.
+
+These features collectively make our job search platform a comprehensive and user-friendly solution for both job seekers and recruiters.
 ## ✨ Technologies Used
 
 ### Frontend
