@@ -8,9 +8,9 @@ You can access the website at: [Website URL](http://khanhdang2911-001-site1.ctem
 - **Password:** 60-dayfreetrial
 ## Product Description
 
-In today's fast-paced digital era, finding and securing employment has been revolutionized by online platforms. Our Job Portal web application is designed to streamline the job search and recruitment processes, making them more efficient, transparent, and user-friendly. Whether you are a job seeker looking for your next opportunity or a recruiter searching for the perfect candidate, our platform offers a comprehensive set of features tailored to meet your needs.
+In today's fast-paced digital era, finding and securing employment has been revolutionized by online platforms. Our JobSeed web application is designed to streamline the job search and recruitment processes, making them more efficient, transparent, and user-friendly. Whether you are a job seeker looking for your next opportunity or a recruiter searching for the perfect candidate, our platform offers a comprehensive set of features tailored to meet your needs.
 
-Welcome to our Job Portal, your ultimate destination for all things related to job searching and recruitment. Our mission is to connect job seekers with potential employers in a seamless and effective manner, transforming the way people find jobs and hire talent.
+Welcome to our JobSeed, your ultimate destination for all things related to job searching and recruitment. Our mission is to connect job seekers with potential employers in a seamless and effective manner, transforming the way people find jobs and hire talent.
 
 
 
@@ -134,7 +134,7 @@ To help you explore the features of our JobSeed Website, we have provided sample
 - **Job Seeker Account:** Use this account to search for jobs, apply to positions, and manage your profile and application history. Explore the job search and application tracking features.
 > ### Important Notice
 >
-> Please note that providing these test accounts and passwords is necessary for you to fully experience the functionalities of our Job Portal. However, we understand the risks involved in sharing this information publicly. We kindly ask for your cooperation:
+> Please note that providing these test accounts and passwords is necessary for you to fully experience the functionalities of our JobSeed. However, we understand the risks involved in sharing this information publicly. We kindly ask for your cooperation:
 >
 > - **Use these accounts responsibly**: If you don't need to alter or delete important data, please avoid doing so. However, if necessary, feel free to test functions.
 > - **Respect the platform**: If you do not find the platform useful, we ask that you refrain from malicious activities or attempts to disrupt its operations.
@@ -165,7 +165,7 @@ For further information or any queries, please contact us at:
 
 ## 🚶 Contributing
 
-We welcome contributions to enhance our Job Portal web application! Whether you have a suggestion for a new feature, an improvement to existing functionality, or a bug fix, your input is valuable. Here’s how you can contribute:
+We welcome contributions to enhance our JobSeed web application! Whether you have a suggestion for a new feature, an improvement to existing functionality, or a bug fix, your input is valuable. Here’s how you can contribute:
 
 ### How to Contribute
 
