@@ -50,6 +50,9 @@ In today's fast-paced digital era, finding and securing employment has been revo
 ### Database
 
 - **SQL Server**: A robust and scalable relational database management system from Microsoft, used to manage and store the application's data securely.
+## Project Timeline
+
+This project was completed from June 15, 2024, to June 26, 2024.
 
 ## 🍼 Running the Application
 
