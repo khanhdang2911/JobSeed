@@ -108,6 +108,42 @@ Update the connection string in <sub>appsettings.json</sub> to point to your dat
 
 To access the admin panel, log in with an admin account. Admin functionalities are accessible via the admin dashboard.
 
+### Test Accounts
+
+To help you explore the features of our JobSeed Website, we have provided sample accounts for different user roles. Use these accounts to log in and test the various functionalities available for each role.
+
+#### Admin Account
+
+- **Email:** khanhdangco2911@gmail.com	
+- **Password:** admin123
+
+#### Recruiter Account
+
+- **Username:** johndang@gmail.com
+- **Password:** khanh6ad6
+
+#### Job Seeker Account
+
+- **Username:** dangxuankhanh@gmail.com
+- **Password:** khanh6ad6
+
+### Notes
+
+- **Admin Account:** Use this account to access the admin dashboard, manage user accounts, job listings, and site categories. You can also view detailed reports and analytics.
+- **Recruiter Account:** Use this account to post job listings, review applications, and manage candidate profiles. Experience the full suite of recruitment tools.
+- **Job Seeker Account:** Use this account to search for jobs, apply to positions, and manage your profile and application history. Explore the job search and application tracking features.
+> ### Important Notice
+>
+> Please note that providing these test accounts and passwords is necessary for you to fully experience the functionalities of our Job Portal. However, we understand the risks involved in sharing this information publicly. We kindly ask for your cooperation:
+>
+> - **Use these accounts responsibly**: If you don't need to alter or delete important data, please avoid doing so. However, if necessary, feel free to test functions.
+> - **Respect the platform**: If you do not find the platform useful, we ask that you refrain from malicious activities or attempts to disrupt its operations.
+>
+> Thank you for your understanding and cooperation.
+> 
+Please log in with these accounts to get a comprehensive understanding of the capabilities and features of our JobSeed Website.
+
+
 
 ## Video Introduction and Feature Demonstration
 
