@@ -120,12 +120,12 @@ To help you explore the features of our JobSeed Website, we have provided sample
 #### Recruiter Account
 
 - **Username:** johndang@gmail.com
-- **Password:** khanh6ad6
+- **Password:** khanh123
 
 #### Job Seeker Account
 
-- **Username:** dangxuankhanh@gmail.com
-- **Password:** khanh6ad6
+- **Username:** alani@gmail.com
+- **Password:** khanh123
 
 ### Notes
 
